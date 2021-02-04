@@ -1,174 +1,57 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-
-/* Document
-   ========================================================================== */
-
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
-
 html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
 }
-
-/* Sections
-   ========================================================================== */
-
-/**
- * Remove the margin in all browsers.
- */
 
 body {
   margin: 0;
 }
 
-/**
- * Render the `main` element consistently in IE.
- */
-
 main {
   display: block;
 }
-
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
 
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
-/* Grouping content
-   ========================================================================== */
-
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-
 hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
 }
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
 
 pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-family: monospace, monospace;
+  font-size: 1em;
 }
-
-/* Text-level semantics
-   ========================================================================== */
-
-/**
- * Remove the gray background on active links in IE 10.
- */
 
 a {
   background-color: transparent;
 }
 
-/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
-
 abbr[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
 }
-
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
 
 b,
 strong {
   font-weight: bolder;
 }
 
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-family: monospace, monospace;
+  font-size: 1em;
 }
-
-/**
- * Add the correct font size in all browsers.
- */
 
 small {
   font-size: 80%;
 }
-
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
 
 sub,
 sup {
@@ -186,254 +69,114 @@ sup {
   top: -0.5em;
 }
 
-/* Embedded content
-   ========================================================================== */
-
-/**
- * Remove the border on images inside links in IE 10.
- */
-
 img {
   border-style: none;
 }
-
-/* Forms
-   ========================================================================== */
-
-/**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
 
 button,
 input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
 }
 
-/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
-
 button,
-input { /* 1 */
+input {
   overflow: visible;
 }
 
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
-
 button,
-select { /* 1 */
+select {
   text-transform: none;
 }
 
-/**
- * Correct the inability to style clickable types in iOS and Safari.
- */
-
-button,
 [type="button"],
 [type="reset"],
-[type="submit"] {
+[type="submit"],
+button {
   -webkit-appearance: button;
 }
 
-/**
- * Remove the inner border and padding in Firefox.
- */
-
-button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type="submit"]::-moz-focus-inner,
+button::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-/**
- * Restore the focus styles unset by the previous rule.
- */
-
-button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type="submit"]:-moz-focusring,
+button:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
-
-/**
- * Correct the padding in Firefox.
- */
 
 fieldset {
   padding: 0.35em 0.75em 0.625em;
 }
 
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
- */
-
 legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
 }
-
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
 
 progress {
   vertical-align: baseline;
 }
 
-/**
- * Remove the default vertical scrollbar in IE 10+.
- */
-
 textarea {
   overflow: auto;
 }
 
-/**
- * 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10.
- */
-
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
+  box-sizing: border-box;
+  padding: 0;
 }
-
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
 
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
-
 [type="search"] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
 }
-
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
 
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
-
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
+  -webkit-appearance: button;
+  font: inherit;
 }
-
-/* Interactive
-   ========================================================================== */
-
-/*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
 
 details {
   display: block;
 }
 
-/*
- * Add the correct display in all browsers.
- */
-
 summary {
   display: list-item;
 }
-
-/* Misc
-   ========================================================================== */
-
-/**
- * Add the correct display in IE 10+.
- */
 
 template {
   display: none;
 }
 
-/**
- * Add the correct display in IE 10.
- */
-
 [hidden] {
   display: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 * {
   box-sizing: border-box;
@@ -444,7 +187,6 @@ template {
 html {
   font-size: 100%;
 }
-
 // @media screen and (max-width: 799px) {
 //   html {
 //     font-size: 87.5%;
@@ -472,8 +214,8 @@ a {
   transition: $transition-time;
 
   &:active,
-  &:hover,
-  &:focus {
+  &:focus,
+  &:hover {
     outline-width: 0;
   }
 
@@ -483,22 +225,22 @@ a {
     text-decoration: underline;
   }
 
-  &:active{
+  &:active {
     transition: 0s;
     color: $theme2-dark;
   }
 
-  &:focus{
+  &:focus {
     text-decoration: underline;
   }
 }
 
-button,
 [type="button"],
 [type="reset"],
 [type="submit"],
 [role="button"],
-.file-wrap{
+.file-wrap,
+button {
   @include clickable;
   user-select: none;
   background-color: $bg1;
@@ -511,26 +253,55 @@ button,
   font-weight: 500;
   transition: $transition-time;
 
-  &:active, &:focus, &:focus-within{
+  &:active,
+  &:focus,
+  &:focus-within {
     outline-width: 0;
   }
 
-  &:focus, &:focus-within{
+  &:focus,
+  &:focus-within {
     transition: 0s;
     border-color: $theme2;
   }
-  &:hover{
+
+  &:hover {
     transition: $transition-time;
     border-color: $theme2;
     background: $bg3;
     color: $fg1;
     cursor: pointer;
   }
-  &:active{
+
+  &:active {
     transition: 0s;
     background: $theme2;
     border-color: $theme2;
     color: $fg0;
+  }
+}
+
+.b2 {
+  background: $theme2;
+  border-color: transparent;
+  color: $black0;
+
+  &:hover {
+    background-color: $theme2-light;
+    border-color: transparent;
+    color: $black0;
+  }
+
+  &:active {
+    background-color: $theme2-dark;
+    border-color: transparent;
+    color: $black0;
+  }
+  &:focus:not(:hover):not(:active){
+    border-color: $theme2;
+    background: $black2;
+    transition: $transition-time;
+    color: $white4;
   }
 }
 
@@ -547,8 +318,10 @@ input[type="tel"],
 input[type="time"],
 input[type="url"],
 input[type="week"],
+input:not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="range"]),
 select,
-.color-wrap, {
+.color-wrap,
+ {
   @include input;
   display: inline-block;
   background: $bg2;
@@ -557,103 +330,103 @@ select,
   border-radius: $radius1;
   padding: 0.3rem 0.6rem;
   font-family: inherit;
+  outline: none !important;
 
-  &:focus, &:active{
-    outline-width: 0;
+  &:active,
+  &:focus {
     border-color: $theme2;
+  }
+  &:invalid{
+    border-left-color: $theme-red;
+    box-shadow: none !important;
   }
 }
 
-input[type="range"]
-{
+input[type="range"] {
+  width: 100%;
+  margin: 0;
+  padding: 0.5rem 0;
+  outline: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  outline: none !important;
+  transition: $transition-time;
+  $thumb-color: $fg0;
+  $thumb-focus: $fg4;
+  $track-color: $bg5;
+  $track-focus: $bg5;
+
+  &::-webkit-slider-runnable-track {
+    cursor: pointer;
     width: 100%;
-    margin: 0;
-    padding: .5rem 0;
-    outline: none;
-    background-color: transparent;
-    -webkit-appearance: none;
-    outline: none !important;
+    height: 0.2rem;
+    background: $track-color;
+    border-radius: 1rem;
     transition: $transition-time;
+  }
 
-    $thumb-color: $fg0;
-    $thumb-focus: $fg4;
-    $track-color: $bg5;
-    $track-focus: $bg5;
+  &::-moz-range-track {
+    cursor: pointer;
+    width: 100%;
+    height: 0.2rem;
+    background: $track-color;
+    border-radius: 1rem;
+    transition: $transition-time;
+  }
 
+  &::-webkit-slider-thumb {
+    background: $thumb-color;
+    margin-top: -0.44rem;
+    appearance: none;
+    height: 1.25rem;
+    width: 1.25rem;
+    border-radius: 50%;
+    border: none;
+    transition: $transition-time;
+    cursor: pointer;
+  }
 
+  &::-moz-range-thumb {
+    background: $thumb-color;
+    height: 1.25rem;
+    width: 1.25rem;
+    border-radius: 50%;
+    border: none;
+    transition: $transition-time;
+    cursor: pointer;
+  }
 
-    &::-webkit-slider-runnable-track
-    {
-      cursor: pointer;
-      width: 100%;
-      height: 0.2rem;
-      background: $track-color;
-      border-radius: 1rem;
-      transition: $transition-time;
+  &:active {
+    &::-moz-range-track {
+      background: $track-focus;
     }
-    &::-moz-range-track
-    {
-      cursor: pointer;
-      width: 100%;
-      height: 0.2rem;
-      background: $track-color;
-      border-radius: 1rem;
-      transition: $transition-time;
+
+    &::-moz-range-thumb {
+      background: $thumb-focus;
     }
 
+    &::-webkit-slider-runnable-track {
+      background: $track-focus;
+    }
 
-    &::-webkit-slider-thumb
-    {
+    &::-webkit-slider-thumb {
+      background: $thumb-focus;
+    }
+  }
+
+  &:focus {
+    &::-moz-range-thumb {
+      transition: 0s;
+      border: $border-width solid $theme2-dark;
       background: $thumb-color;
-      margin-top: -0.44rem;
-      appearance: none;
-      height: 1.25rem;
-      width: 1.25rem;
-      border-radius: 50%;
-      border: none;
-      transition: $transition-time;
-      cursor: pointer;
-    }
-    &::-moz-range-thumb
-    {
-      background: $thumb-color;
-      height: 1.25rem;
-      width: 1.25rem;
-      border-radius: 50%;
-      border: none;
-      transition: $transition-time;
-      cursor: pointer;
     }
 
-    &:active
-    {
-      &::-moz-range-track{
-        background:$track-focus;
-      }
-      &::-moz-range-thumb{
-        background: $thumb-focus;
-      }
-      &::-webkit-slider-runnable-track
-      {
-        background: $track-focus;
-      }
-      &::-webkit-slider-thumb{
-        background: $thumb-focus;
-      }
+    &::-webkit-slider-thumb {
+      transition: 0s;
+      box-shadow: 0 0 0 $border-width $theme2-dark;
+      background: $thumb-color;
     }
-    &:focus
-    {
-      &::-moz-range-thumb{
-        transition: 0s;
-        border: $border-width solid $theme2-dark;
-        background: $thumb-color;
-      }
-      &::-webkit-slider-thumb{
-        transition: 0s;
-        box-shadow: 0 0 0 $border-width $theme2-dark;
-        background: $thumb-color;
-      }
-    }
+  }
 }
 
 .color-wrap {
@@ -708,8 +481,8 @@ input[type="color"] {
   }
 }
 
-
-textarea, .textarea[texteditable]{
+.textarea[texteditable],
+textarea {
   @include section;
   background: $bg2;
   border: $border-width solid $bg1;
@@ -722,11 +495,11 @@ textarea, .textarea[texteditable]{
   resize: vertical;
   scrollbar-width: thin;
   scrollbar-color: $fg4 transparent;
-  &:focus-within{
+
+  &:focus-within {
     border-color: $theme2;
   }
 }
-
 
 select {
   background-image: url("data:image/svg+xml;utf8,<svg fill='lightgrey' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
@@ -737,15 +510,12 @@ select {
   width: 10.625rem;
   color: $fg3;
   font-size: inherit;
+  padding: 0.5rem 0.6rem;
 
   &:hover {
     cursor: pointer;
   }
 }
-
-
-
-
 
 .radio {
   display: block;
@@ -757,7 +527,6 @@ select {
   margin: 1rem 0;
   user-select: none;
   box-sizing: content-box;
-
 
   input {
     position: absolute;
@@ -789,14 +558,16 @@ select {
   input:checked ~ .checkmark {
     transition: 0;
     background-color: $bg2;
-    border: .5rem solid $theme;
+    border: 0.5rem solid $theme;
   }
 
-  &:focus-within, &:focus {
+  &:focus,
+  &:focus-within {
     .checkmark {
       transition: 0;
       box-shadow: 0 0 0 $border-width $theme2;
     }
+
     input:checked ~ .checkmark {
       background: $bg3;
     }
@@ -830,7 +601,7 @@ select {
     width: 1.555rem;
     background: $bg2;
     border: $border-width solid $bg1;
-    border-radius: .25rem;
+    border-radius: 0.25rem;
   }
 
   input:checked ~ .checkmark:after {
@@ -844,19 +615,18 @@ select {
     left: 0.4rem;
     top: 0.15rem;
     width: 0.313rem;
-    height: .625rem;
+    height: 0.625rem;
     border: solid $bg2;
     border-width: 0 0.188rem 0.188rem 0;
     transform: rotate(45deg);
   }
-
-
 
   &:focus-within {
     .checkmark {
       transition: 0;
       border-color: $theme2;
     }
+
     input:checked ~ .checkmark {
       transition: 0;
       box-shadow: 0 0 0 $border-width $theme2;
@@ -876,15 +646,13 @@ select {
   }
 }
 
-
-
 .file-wrap {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   display: inline-block;
 
-  *{
+  * {
     cursor: pointer;
   }
 
@@ -906,9 +674,6 @@ select {
     }
   }
 }
-
-
-
 
 .switch {
   position: relative;
@@ -939,7 +704,6 @@ select {
   }
 
   .slider {
-
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -957,55 +721,59 @@ select {
       content: "";
       height: 1.25rem;
       width: 1.25rem;
-      left: .2rem;
-      bottom: .12rem;
+      left: 0.2rem;
+      bottom: 0.12rem;
       background-color: $fg0;
       border-radius: 50%;
     }
   }
 
-  &:focus-within input:checked ~ .slider{
+  &:focus-within input:checked ~ .slider {
     box-shadow: 0 0 0 $border-width $theme2;
   }
 
-  &:hover, &:focus-within{
-    .slider{
+  &:focus-within,
+  &:hover {
+    .slider {
       transition: 0s;
       border-color: $theme2;
     }
   }
 }
 
-.switch-label{
+.switch-label {
   position: relative;
-  top: .125rem;
-  left: .625rem;
+  top: 0.125rem;
+  left: 0.625rem;
   user-select: none;
-  &:hover{
+
+  &:hover {
     cursor: pointer;
   }
 }
 
-.form-label{
+.form-label {
   display: block;
   margin-top: 0.5rem;
   margin-bottom: 0.2rem;
+  color: $white5;
+  opacity: 0.9;
 }
 
-
-details{
+details {
   background: $bg3;
   padding: 0.4rem;
   border-radius: $radius2;
   margin: 0.4rem 0;
-  summary{
+
+  summary {
     margin: -0.4rem;
     vertical-align: top;
     font-size: 1.1rem;
     background-color: $bg2;
     border: $border-width solid $bg1;
     color: $fg2;
-    padding: 0.2rem .5rem;
+    padding: 0.2rem 0.5rem;
     border-radius: $radius2;
     outline: none !important;
     transition: border $transition-time, background-color $transition-time;
@@ -1014,33 +782,37 @@ details{
     &::-webkit-details-marker {
       color: $fg0;
     }
-    &:hover, &:focus{
+
+    &:focus,
+    &:hover {
       cursor: pointer;
       border-color: $theme2;
     }
-    &:hover{
+
+    &:hover {
       background-color: $bg3;
     }
-    &:active{
+
+    &:active {
       transition: 0s;
       background: $theme2;
       color: $fg0;
     }
   }
-  &[open] summary{
+
+  &[open] summary {
     transition: 0s;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
   }
 }
 
-
-
-input, button{
+button,
+input {
   margin: 0.15rem 0;
 }
 
-br{
+br {
   user-select: none;
 }
 
@@ -1053,9 +825,11 @@ img {
 }
 
 hr {
+  background: $white4;
+  opacity: 0.7;
   box-sizing: content-box;
   border-radius: $radius0;
-  height: 0.25em;
+  height: $border-width;
   padding: 0;
   margin: 1.5em 0;
   overflow: hidden;
@@ -1238,12 +1012,13 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: .2em;
-  margin-bottom: .2em;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
   font-weight: 600;
   line-height: 1.25;
   padding-bottom: 0;
-  &.h-border{
+
+  &.h-border {
     border-bottom: $border-width solid $theme;
     padding-bottom: 0;
     display: inline-block;
@@ -1349,7 +1124,7 @@ table tr {
   border-top: $border-width solid $bg2;
 }
 
-table tr:first-child{
+table tr:first-child {
   background-color: $bg2;
 }
 
@@ -1370,9 +1145,7 @@ img[align=left] {
   padding-right: 1.25em;
 }
 
-
-
-.prompter{
+.prompter {
   position: fixed;
   z-index: 100;
   top: 0;
@@ -1383,7 +1156,8 @@ img[align=left] {
   display: flex;
   align-items: center;
   justify-content: center;
-  &>section{
+
+  & > section {
     padding: 40px;
     overflow-y: auto;
     position: relative;
@@ -1398,14 +1172,15 @@ img[align=left] {
     scrollbar-width: thin;
     scrollbar-color: $fg4 transparent;
 
-    .box{
+    .box {
       margin: -40px;
       padding: 20px;
       background: $bg2;
       margin-top: 0;
       border-top: $border-width solid $bg1;
     }
-    .closeicon{
+
+    .closeicon {
       color: $fg0;
       content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 50 50' overflow='visible' stroke='white' stroke-opacity='0.7' stroke-width='10' stroke-linecap='round'><line x2='50' y2='50' /><line x1='50' y2='50' /></svg>");
       font-family: sans-serif;
@@ -1421,11 +1196,13 @@ img[align=left] {
       position: absolute;
       background: $theme-red;
       transition: $transition-time;
-      &:hover{
+
+      &:hover {
         background: $theme-light;
         cursor: pointer;
       }
-      &:active{
+
+      &:active {
         transition: 0s;
         background: $theme-dark;
       }
