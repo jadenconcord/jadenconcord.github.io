@@ -1085,9 +1085,18 @@ header {
   margin-bottom: 1rem;
   border-radius: 0 0 8px 8px; }
   header nav {
-    text-align: center; }
+    text-align: center;
+    background: #dda76d;
+    padding: 0.1rem;
+    border-top: 2px solid #deb386;
+    border-bottom: 2px solid #dd9b53;
+    border-radius: 0 0 4px 4px;
+    margin: 0 -2rem;
+    margin-top: -1rem;
+    margin-bottom: 1rem; }
     header nav a {
-      margin: 0 .2rem; }
+      margin: 0 .2rem;
+      color: #2a2523; }
   header section {
     display: flex;
     justify-content: space-around; }
@@ -1113,11 +1122,10 @@ main {
   --fg5: #c5c1c3;
   color: var(--fg2);
   background: var(--bg4);
-  border-radius: 8px 8px 0 0;
+  border-radius: 8px;
   max-width: 600px;
   margin: 0 auto;
-  padding: 2rem;
-  min-height: 100vh; }
+  padding: 2rem; }
   main .repos {
     display: flex;
     flex-wrap: wrap; }

@@ -18,7 +18,16 @@ header{
     text-align: center;
     a{
       margin: 0 .2rem;
+      color: $black1;
     }
+    background: $theme;
+    padding: 0.1rem;
+    border-top: $border-width solid $theme-light;
+    border-bottom: $border-width solid $theme-dark;
+  border-radius: 0 0 $radius1 $radius1;
+    margin: 0 -2rem;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
   }
 
   section{
@@ -39,11 +48,10 @@ main{
   @include content;
 
   background: $bg4;
-  border-radius: $radius2 $radius2 0 0;
+  border-radius: $radius2;
   max-width: 600px;
   margin: 0 auto;
   padding: 2rem;
-  min-height: 100vh;
 
   .repos{
     display: flex;
