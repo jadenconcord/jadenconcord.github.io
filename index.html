@@ -1,19 +1,48 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Jaden Concord</title>
-  </head>
-  <body>
-    <main>
+
+<head>
+  <meta charset="utf-8">
+  <title>Jaden Concord</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/76759653?s=460&u=d5e9c6481b3f31bdad3afe4c775de560d6eff9f0&v=4">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="https://github.com/jadenconcord" target="_blank">Github</a>
+      <a href="https://dev.to/jadenconcord" target="_blank">Dev.to</a>
+    </nav>
+    <section>
+      <img src="https://avatars.githubusercontent.com/u/76759653?s=460&u=d5e9c6481b3f31bdad3afe4c775de560d6eff9f0&v=4" alt="jadenconcord avitar">
       <h1>Jaden Concord Homepage</h1>
-      <a href="/test.html">test</a>
-      <section>
-        <h3>Links</h3>
-        <ul>
-          <li><a href="https://jadenconcord.github.io/a/elementalcss/0-9/elemental.scss">Elemental SCSS</a></li>
-        </ul>
-      </section>
-    </main>
-  </body>
+    </section>
+  </header>
+  <main>
+    <section id="repos_temp">
+      <template>
+        <h2>Repositories</h2>
+        <div class="repos">
+          {each repos repo}
+          <a href="{repo.url}" target="_black" title="{repo.name}"><section>
+            <h3>{repo.name}</h3>
+            <p>{repo.description}</p>
+          </section></a>
+          {/each}
+        </div>
+      </template>
+    </section>
+    <section>
+      <a href="/text.html">text</a>
+      <h2>Links</h2>
+      <ul>
+        <li><a href="/a/elementalcss/0-9/elemental.scss">Elemental SCSS</a></li>
+      </ul>
+    </section>
+  </main>
+  <script src="js/ice.js" charset="utf-8"></script>
+  <script src="js/main.js" charset="utf-8"></script>
+</body>
+
 </html>

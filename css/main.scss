@@ -1,0 +1,68 @@
+@import 'theme';
+@import '../a/elementalcss/0-9/elemental.scss';
+
+
+
+
+header{
+  @include navigator;
+
+  background: $bg4;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  border-radius: 0 0 $radius2 $radius2;
+
+  nav{
+    text-align: center;
+    a{
+      margin: 0 .2rem;
+    }
+  }
+
+  section{
+    display: flex;
+    justify-content: space-around;
+    img{
+      height: 100px;
+      width: 100px;
+    }
+    h1{
+      padding: 25.1px 0;
+      margin: 0;
+    }
+  }
+}
+
+main{
+  @include content;
+
+  background: $bg4;
+  border-radius: $radius2 $radius2 0 0;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+
+  .repos{
+    display: flex;
+    flex-wrap: wrap;
+    a{
+      width: 50%;
+      margin-bottom: 1rem;
+      section{
+        @include section;
+        background: $bg3;
+        margin: .5rem;
+        padding: .5rem;
+        height: 100%;
+        border-radius: $radius2;
+        border: $border-width solid $bg2;
+        h3{
+          text-align: center;
+        }
+      }
+    }
+  }
+}

@@ -94,6 +94,10 @@ select {
   text-transform: none;
 }
 
+.clear{
+  clear: both;
+}
+
 [type="button"],
 [type="reset"],
 [type="submit"],
@@ -284,18 +288,16 @@ button {
 .b2 {
   background: $theme2;
   border-color: transparent;
-  color: $black0;
+  color: $white0;
 
   &:hover {
     background-color: $theme2-light;
     border-color: transparent;
-    color: $black0;
   }
 
   &:active {
     background-color: $theme2-dark;
     border-color: transparent;
-    color: $black0;
   }
   &:focus:not(:hover):not(:active){
     border-color: $theme2;
@@ -337,7 +339,7 @@ select,
     border-color: $theme2;
   }
   &:invalid{
-    border-left-color: $theme-red;
+    border-bottom-color: $theme-red;
     box-shadow: none !important;
   }
 }
@@ -1146,13 +1148,15 @@ img[align=left] {
 }
 
 .prompter {
+  @include section;
+
   position: fixed;
   z-index: 100;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: #000b;
+  background: rgba($black1, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1167,7 +1171,7 @@ img[align=left] {
     max-width: 90vw;
     max-height: 90vh;
     background: $bg4;
-    border: $border-width solid $theme;
+    border: $border-width solid $bg1;
     border-radius: $radius3;
     scrollbar-width: thin;
     scrollbar-color: $fg4 transparent;
