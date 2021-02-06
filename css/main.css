@@ -1145,6 +1145,11 @@ main {
         border-radius: 8px;
         border: 2px solid var(--bg2); }
         main .repos a section h3 {
-          text-align: center; }
+          text-align: center;
+          text-decoration: none; }
+        main .repos a section p {
+          text-decoration: none; }
+        main .repos a section:hover, main .repos a section:focus {
+          border-color: #c85238; }
 
 /*# sourceMappingURL=main.css.map */

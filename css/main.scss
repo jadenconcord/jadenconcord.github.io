@@ -61,6 +61,13 @@ main{
         border: $border-width solid $bg2;
         h3{
           text-align: center;
+          text-decoration: none;
+        }
+        p{
+          text-decoration: none;
+        }
+        &:hover, &:focus{
+          border-color: $theme2;
         }
       }
     }
