@@ -1,2 +1,1 @@
-# Enter the Homepage
-[HERE](https://jadenconcord.github.io)
+# [OPEN HOMEPAGE](https://jadenconcord.github.io)
