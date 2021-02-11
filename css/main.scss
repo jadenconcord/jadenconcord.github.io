@@ -80,4 +80,38 @@ main{
       }
     }
   }
+
+  .articles{
+    a{
+      display: inline-block;
+      float: left;
+      height: 310px;
+      width: 50%;
+      margin-bottom: 1rem;
+      section{
+        @include section;
+        background: $bg3;
+        margin: .5rem;
+        height: 100%;
+        border-radius: $radius2;
+        border: $border-width solid $bg2;
+        img{
+          box-sizing: border-box;
+          border-radius: $radius2 $radius2 0 0;
+        }
+        h3{
+          margin: .5rem;
+          text-align: center;
+          text-decoration: none;
+        }
+        p{
+          margin: .5rem;
+          text-decoration: none;
+        }
+        &:hover, &:focus{
+          border-color: $theme2;
+        }
+      }
+    }
+  }
 }

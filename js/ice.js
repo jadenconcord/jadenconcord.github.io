@@ -75,7 +75,11 @@ function GetPerams(text){
 }
 
 function UnEncode(html){
-  return html.replaceAll('&bl;', '{').replaceAll('&br;', '}').replaceAll('&and;', '&');
+  return html.replaceAll('&bl;', '{')
+  .replaceAll('&br;', '}')
+  .replaceAll('&and;', '&')
+  .replaceAll('&lt;', '<')
+  .replaceAll('&gt;', '>')
 }
 
 function EncodeBraces(html){
@@ -97,7 +101,8 @@ function EncodeBraces(html){
 function DecodeHTML(html) {
     let textarea = document.createElement("textarea");
     textarea.innerHTML = html
-    return textarea.value;
+    let result = textarea.value;
+    return result;
 }
 
 // Default Blocks

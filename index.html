@@ -31,6 +31,18 @@
           </section></a>
           {/each}
         </div>
+        <h2>Articles</h2>
+        {each articles article t}
+        <div class="articles">
+          <a href="{article.url}" title="{article.title}" target="_blank">
+            <section>
+              <img src="{article.cover_image}" alt="">
+              <h3>{article.title}</h3>
+              <p>{article.description}</p>
+            </section>
+          </a>
+        </div>
+        {/each}
       </template>
     </section>
     <section>

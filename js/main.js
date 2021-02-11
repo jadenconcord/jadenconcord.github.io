@@ -1,27 +1,13 @@
 let repos = [];
+let articles = [];
 
 (async () => {
-  const response = await fetch('https://api.github.com/users/jadenconcord/repos');
-  const data = await response.json();
-  var result = [];
-  if (data.length)
-    data.forEach(repo => {
-      result.push({
-        name: repo.name,
-        description: repo.description || '',
-        url: repo.html_url,
-      })
-    });
-  else result = [{
-    name: "theme-generator",
-    description: "generate themes",
-    url: "https://github.com/jadenconcord/theme-generator"
-  },{
-    name: "tester",
-    description: "generate",
-    url: "https://github.com/jadenconcord/theme-generator"
-  },]
-  repos = result;
+  const reposRes = await fetch('https://api.github.com/users/jadenconcord/repos');
+  repos = await reposRes.json();
+
+
+  const articleRes = await fetch('https://dev.to/api/articles?username=jadenconcord');
+  articles = await articleRes.json();
 
 
   new Template('#repos_temp')

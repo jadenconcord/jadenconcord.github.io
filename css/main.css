@@ -309,7 +309,6 @@ input[type="week"],
 input:not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="range"]),
 select,
 .color-wrap {
-  display: inline-block;
   background: var(--bg2);
   border: 2px solid var(--bg1);
   color: var(--fg3);
@@ -615,7 +614,7 @@ select {
       top: 0.625rem;
       left: 0.5rem;
       font-size: inherit;
-      color: #b8b8b8; }
+      opacity: 0; }
     .file-wrap .button-wrap .b1,
     .file-wrap .button-wrap .b2 {
       display: inline-block; }
@@ -734,7 +733,7 @@ hr {
   border-radius: 2px;
   height: 2px;
   padding: 0;
-  margin: 1.5em 0;
+  margin: 0.5em 0 1em;
   overflow: hidden;
   background-color: var(--fg4);
   border: 0; }
@@ -1159,5 +1158,42 @@ main {
           text-decoration: none; }
         main .repos a section:hover, main .repos a section:focus {
           border-color: #c85238; }
+  main .articles a {
+    display: inline-block;
+    float: left;
+    height: 310px;
+    width: 50%;
+    margin-bottom: 1rem; }
+    main .articles a section {
+      --bg0: #1d1916;
+      --bg1: #2a2523;
+      --bg2: #2f2a28;
+      --bg3: #383533;
+      --bg4: #3d3a38;
+      --bg5: #4e4b49;
+      --fg0: #f3f2f2;
+      --fg1: #e8e3e5;
+      --fg2: #e4dfe1;
+      --fg3: #dcd8da;
+      --fg4: #d8d4d6;
+      --fg5: #c5c1c3;
+      color: var(--fg2);
+      background: var(--bg3);
+      margin: .5rem;
+      height: 100%;
+      border-radius: 8px;
+      border: 2px solid var(--bg2); }
+      main .articles a section img {
+        box-sizing: border-box;
+        border-radius: 8px 8px 0 0; }
+      main .articles a section h3 {
+        margin: .5rem;
+        text-align: center;
+        text-decoration: none; }
+      main .articles a section p {
+        margin: .5rem;
+        text-decoration: none; }
+      main .articles a section:hover, main .articles a section:focus {
+        border-color: #c85238; }
 
 /*# sourceMappingURL=main.css.map */
