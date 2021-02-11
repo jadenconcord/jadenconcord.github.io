@@ -63,12 +63,9 @@ function ReplaceBlock(match){
 
 function GetPerams(text){
   if(!text)return {};
-  let encoded = text.replaceAll('[[', '&boxl').replaceAll(']]', '&boxr')
-                    .replaceAll('[', '`+').replaceAll(']', '+`')
-                    .replaceAll('&boxl', '[').replaceAll('&boxr', ']')
   let regex = /(\w+)(="(.*?)")?/ // name="value" or name
   let result = {}
-  RegexReplace(encoded, regex, match => {
+  RegexReplace(text, regex, match => {
     result[match[1]] = match[3] === undefined ? true : match[3];
     return '';
   });
@@ -110,7 +107,7 @@ let TemplateBlocks = {
   },
   if: a => '`;if('+a.arg+'){result+=`'+a.content+'`;}result += `',
   each: a => {
-    return '`;'+a.args[0]+'.forEach(('+a.args[1]+(a.args[2] ? ','+a.args[2] : '')+') => {result+=`'+a.content+'`;});result += `';
+    return '`;'+a.args[0]+'.forEach('+a.args[1]+' => {result+=`'+a.content+'`;});result += `';
   },
   debug: a => '`;result+=console.log('+a.arg+') || "";result+=`',
   skip: a => a.content,
@@ -137,17 +134,15 @@ TemplateBlocks = {...TemplateBlocks,
   <input id="colorInput_${a.perams.name}-inputbox" value="${a.perams.value}" type="color" onchange="document.getElementById('colorInput_${a.perams.name}').value = this.value">
   </div>`,
   inputSelect: a => `<label class="form-label">${a.perams.label || ''}</label>
-  <select name="${a.perams.name}" ${a.perams.multiple ? 'multiple' : ''} onchange="${a.perams.onchange}">
-    \`+CommaLangArray(\`${a.perams.options}\`, 'name', 'text', 'default').reduce((d, c) => d+'<option value="'+c.name+'" '+(c.default ? 'selected' : '')+' '+(c.name == 'disabled' ? 'disabled' : '')+'>'+c.text+'</option>', '')+\`
+  <select name="${a.perams.name}" ${a.perams.multiple ? 'multiple' : ''}>
+    ${CommaLangArray(a.perams.options, 'name', 'text', 'default').reduce((d, c) => d+'<option value="'+c.name+'" '+(c.default ? 'selected' : '')+' '+(c.name == 'disabled' ? 'disabled' : '')+'>'+c.text+'</option>', '')}
   </select>`,
-  inputSwitch: a => `${(a.perams.checked = a.perams.checked.replace(/^\`\+(.+)\+\`$/, '$1')) && ''}
-  <br><label class="switch">
-  <input type="checkbox" onchange="${a.perams.onchange || ''}" name="${a.perams.name}" id="switch-${a.perams.name}" \${${a.perams.checked} && ${a.perams.checked} != "false" ? 'checked="${a.perams.checked}"' : ''}>
+  inputSwitch: a => `<br><label class="switch">
+  <input type="checkbox" onchange="${a.perams.onchange || ''}" name="${a.perams.name}" id="switch-${a.perams.name}" ${a.perams.checked ? 'checked' : ''}>
   <span class="slider"></span>
   </label><label for="switch-${a.perams.name}" class="switch-label">${a.perams.label}</label>`,
-  inputCheckbox: a => `${(a.perams.checked = a.perams.checked.replace(/^\`\+(.+)\+\`$/, '$1')) && ''}
-  <label class="checkbox">${a.perams.label}
-    <input type="checkbox" name="${a.perams.name}" \${${a.perams.checked} && ${a.perams.checked} != "false" ? 'checked="${a.perams.checked}"' : ''} onchange="${a.perams.toggle ? `ToggleDisplayById('${a.perams.toggle}', this)` : ''};${a.perams.onchange || ''}">
+  inputCheckbox: a => `<label class="checkbox">${a.perams.label}
+    <input type="checkbox" name="${a.perams.name}" ${a.perams.checked ? 'checked' : ''} ${a.perams.toggle ? `onchange="ToggleDisplayById('${a.perams.toggle}', this)"` : ''}>
     <span class="checkmark"></span>
   </label>`,
   inputRadio: a => `<br><label class="form-label">${a.perams.label || ''}</label>

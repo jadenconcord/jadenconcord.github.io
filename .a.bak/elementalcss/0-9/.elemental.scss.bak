@@ -94,10 +94,6 @@ select {
   text-transform: none;
 }
 
-.clear {
-  clear: both;
-}
-
 [type="button"],
 [type="reset"],
 [type="submit"],
@@ -288,19 +284,20 @@ button {
 .b2 {
   background: $theme2;
   border-color: transparent;
-  color: $white0;
+  color: $black0;
 
   &:hover {
     background-color: $theme2-light;
     border-color: transparent;
+    color: $black0;
   }
 
   &:active {
     background-color: $theme2-dark;
     border-color: transparent;
+    color: $black0;
   }
-
-  &:focus:not(:hover):not(:active) {
+  &:focus:not(:hover):not(:active){
     border-color: $theme2;
     background: $black2;
     transition: $transition-time;
@@ -326,6 +323,7 @@ select,
 .color-wrap,
  {
   @include input;
+  display: inline-block;
   background: $bg2;
   border: $border-width solid $bg1;
   color: $fg3;
@@ -338,9 +336,8 @@ select,
   &:focus {
     border-color: $theme2;
   }
-
-  &:invalid {
-    border-bottom-color: $theme-red;
+  &:invalid{
+    border-left-color: $theme-red;
     box-shadow: none !important;
   }
 }
@@ -668,7 +665,7 @@ select {
       top: 0.625rem;
       left: 0.5rem;
       font-size: inherit;
-      opacity: 0;
+      color: #b8b8b8;
     }
 
     .b1,
@@ -834,7 +831,7 @@ hr {
   border-radius: $radius0;
   height: $border-width;
   padding: 0;
-  margin: 0.5em 0 1em;
+  margin: 1.5em 0;
   overflow: hidden;
   background-color: $fg4;
   border: 0;
@@ -1149,14 +1146,13 @@ img[align=left] {
 }
 
 .prompter {
-  @include section;
   position: fixed;
   z-index: 100;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba($black1, 0.8);
+  background: #000b;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1171,7 +1167,7 @@ img[align=left] {
     max-width: 90vw;
     max-height: 90vh;
     background: $bg4;
-    border: $border-width solid $bg1;
+    border: $border-width solid $theme;
     border-radius: $radius3;
     scrollbar-width: thin;
     scrollbar-color: $fg4 transparent;

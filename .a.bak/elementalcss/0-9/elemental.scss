@@ -94,7 +94,7 @@ select {
   text-transform: none;
 }
 
-.clear {
+.clear{
   clear: both;
 }
 
@@ -299,8 +299,7 @@ button {
     background-color: $theme2-dark;
     border-color: transparent;
   }
-
-  &:focus:not(:hover):not(:active) {
+  &:focus:not(:hover):not(:active){
     border-color: $theme2;
     background: $black2;
     transition: $transition-time;
@@ -338,8 +337,7 @@ select,
   &:focus {
     border-color: $theme2;
   }
-
-  &:invalid {
+  &:invalid{
     border-bottom-color: $theme-red;
     box-shadow: none !important;
   }
@@ -668,7 +666,7 @@ select {
       top: 0.625rem;
       left: 0.5rem;
       font-size: inherit;
-      opacity: 0;
+      color: #b8b8b8;
     }
 
     .b1,
@@ -834,7 +832,7 @@ hr {
   border-radius: $radius0;
   height: $border-width;
   padding: 0;
-  margin: 0.5em 0 1em;
+  margin: 1.5em 0;
   overflow: hidden;
   background-color: $fg4;
   border: 0;
@@ -1150,6 +1148,7 @@ img[align=left] {
 
 .prompter {
   @include section;
+
   position: fixed;
   z-index: 100;
   top: 0;

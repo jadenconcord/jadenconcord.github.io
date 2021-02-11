@@ -29,7 +29,3 @@ function getTemplate(id) {
 function emptyElement(el){
   while (el.firstChild) el.removeChild(el.firstChild);
 }
-
-function onEnter(func, argument){
-  if(event.key == "Enter")func(argument);
-}
