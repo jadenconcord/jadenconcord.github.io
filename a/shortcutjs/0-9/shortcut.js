@@ -1,8 +1,8 @@
-let $ = document.querySelector;
-let $$ = document.querySelectorAll;
-let $id = document.getElementById;
-let $class = document.getElementsByClassName;
-let $tag = document.getElementsByTagName;
+let $ = document.querySelector.bind(document);
+let $$ = document.querySelectorAll.bind(document);
+let $id = document.getElementById.bind(document);
+let $class = document.getElementsByClassName.bind(document);
+let $tag = document.getElementsByTagName.bind(document);
 
 // https://dev.to/jadenconcord/attempt-to-simplify-the-fetch-api-178b
 let fetcher = (url, options) => {

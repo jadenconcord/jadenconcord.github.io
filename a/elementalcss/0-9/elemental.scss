@@ -326,6 +326,7 @@ select,
 .color-wrap,
  {
   @include input;
+  max-width: 100%;
   background: $bg2;
   border: $border-width solid $bg1;
   color: $fg3;

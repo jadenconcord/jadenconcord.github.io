@@ -124,7 +124,7 @@ let TemplateBlocks = {
 // Form Blocks
 TemplateBlocks = {...TemplateBlocks,
   inputText: a => `<label class="form-label" for="form-${a.perams.name}">${a.perams.label || ''}</label>
-  <input type="text" ${a.perams.pattern ? 'pattern="'+a.perams.pattern+'"' : ''} value="${a.perams.value || a.content || ''}" name="${a.perams.name}" id="form-${a.perams.name}" placeholder="${a.perams.placeholder}" ${a.perams.required ? 'required' : ''}/>`,
+  <input onkeypress="${a.perams.onenter ? 'onEnter((self)=>{'+a.perams.onenter+'}, this)' : ''}" type="text" ${a.perams.pattern ? 'pattern="'+a.perams.pattern+'"' : ''} value="${a.perams.value || a.content || ''}" name="${a.perams.name}" id="form-${a.perams.name}" placeholder="${a.perams.placeholder}" ${a.perams.required ? 'required' : ''}/>`,
   inputRange: a => `<label class="form-label" for="form-${a.perams.name}">${a.perams.label || ''}</label>
   <input type="range" value="${a.perams.value || a.content || 0}" name="${a.perams.name}" step="${a.perams.step || 1}" id="form-${a.perams.name}"/>`,
   inputDate: a => `<label class="form-label">${a.perams.label || ''}</label>
