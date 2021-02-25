@@ -2,7 +2,7 @@ let DEVMODE = {};
 
 function RenderTemplate(template, local){
   let result = DecodeHTML(template);
-  result = EncodeBraces(template);
+  result = EncodeBraces(result);
   result = AutoEndBlocks(result);
   result = FormatTemplateVariables(result);
   result = ReplaceTemplateBlocks(result);
@@ -229,7 +229,7 @@ class Template{
     getData(){
       return GetFormData(document.querySelector(this.query))
     }
-    link(name){
+    link(){
       var names = [...arguments]
       return (...values) => {
         var local = {};
