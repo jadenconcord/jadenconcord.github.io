@@ -95,6 +95,9 @@ select {
 .clear {
   clear: both; }
 
+.center {
+  text-align: center; }
+
 [type="button"],
 [type="reset"],
 [type="submit"],
@@ -309,6 +312,7 @@ input[type="week"],
 input:not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="range"]),
 select,
 .color-wrap {
+  max-width: 100%;
   background: var(--bg2);
   border: 2px solid var(--bg1);
   color: var(--fg3);
@@ -1063,6 +1067,61 @@ img[align=left] {
         transition: 0s;
         background: #dd9b53; }
 
+.theme-widget {
+  --bg0: #1d1916;
+  --bg1: #2a2523;
+  --bg2: #2f2a28;
+  --bg3: #383533;
+  --bg4: #3d3a38;
+  --bg5: #4e4b49;
+  --fg0: #f3f2f2;
+  --fg1: #e8e3e5;
+  --fg2: #e4dfe1;
+  --fg3: #dcd8da;
+  --fg4: #d8d4d6;
+  --fg5: #c5c1c3;
+  color: var(--fg2);
+  position: fixed;
+  right: 0;
+  bottom: 50px;
+  background: var(--bg1);
+  padding: 1rem;
+  border-radius: 8px 0 0 8px;
+  height: 200px;
+  border: 2px solid var(--bg0);
+  outline: none !important; }
+  .theme-widget > div {
+    writing-mode: vertical-rl;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    height: 200px;
+    user-select: none;
+    text-align: center;
+    transform: scaleX(-1) scaleY(-1);
+    color: var(--fg4);
+    font-size: 1.1rem; }
+    .theme-widget > div:hover {
+      cursor: pointer; }
+    .theme-widget > div img {
+      margin-bottom: 8px;
+      transform: scaleX(-1) scaleY(-1); }
+  .theme-widget section {
+    display: none;
+    margin-left: 0 1rem; }
+    .theme-widget section label {
+      color: var(--fg2); }
+  .theme-widget:focus-within {
+    border-color: var(--bg1);
+    background-color: var(--bg2);
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--bg4) transparent; }
+    .theme-widget:focus-within section {
+      display: block; }
+    .theme-widget:focus-within div {
+      display: none; }
+
 header {
   --bg0: #1d1916;
   --bg1: #2a2523;
@@ -1095,7 +1154,7 @@ header {
     margin-bottom: 1rem; }
     header nav a {
       margin: 0 .2rem;
-      color: #2a2523; }
+      color: var(--bg1); }
   header section {
     display: flex;
     justify-content: space-around; }
