@@ -1,6 +1,29 @@
 {
   "projects": [
     {
+      "name": "The Circle",
+      "dir": "thecircle",
+      "type": "web",
+      "grad": [
+        "#5485cc",
+        "#5485cc"
+      ],
+      "private": false,
+      "star": false
+    },
+    {
+      "name": "Pract - Simple Dev training thing",
+      "dir": "pract",
+      "type": "web",
+      "grad": [
+        "#ce7c66",
+        "#d95448"
+      ],
+      "private": false,
+      "star": false,
+      "icon": "cast_for_education"
+    },
+    {
       "name": "Sunspot Digital",
       "dir": "sunspot",
       "type": "web",
@@ -23,6 +46,18 @@
       "star": false,
       "icon": "task_alt",
       "url": "https://todoka.tk"
+    },
+    {
+      "name": "Collistion Physics P5.js",
+      "dir": "collide",
+      "type": "web",
+      "grad": [
+        "#c6c29e",
+        "#c6c29e"
+      ],
+      "private": false,
+      "star": false,
+      "icon": "north_east"
     },
     {
       "name": "MyApp 1.0",
@@ -59,6 +94,54 @@
       "private": false,
       "star": true,
       "icon": "brush"
+    },
+    {
+      "name": "Elemental CSS",
+      "dir": "elementalcss",
+      "type": "web",
+      "grad": [
+        "#48d989",
+        "#58d275"
+      ],
+      "private": false,
+      "star": false,
+      "icon": "backup_table"
+    },
+    {
+      "name": "Hoy",
+      "dir": "hoy",
+      "type": "web",
+      "grad": [
+        "#652ced",
+        "#ed6e2c"
+      ],
+      "private": false,
+      "star": true,
+      "icon": "calendar_today"
+    },
+    {
+      "name": "document editor HTML",
+      "dir": "doceditor",
+      "type": "web",
+      "grad": [
+        "#6f73cd",
+        "#4741db"
+      ],
+      "private": false,
+      "star": false,
+      "icon": "article"
+    },
+    {
+      "name": "AppRender",
+      "dir": "apprender",
+      "type": "web",
+      "grad": [
+        "#d97748",
+        "#d9b548"
+      ],
+      "private": false,
+      "star": true,
+      "icon": "batch_prediction"
     },
     {
       "name": "ICE (V2)",

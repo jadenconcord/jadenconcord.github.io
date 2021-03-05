@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Document Editor HTML</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <main>
+    <header>
+      <input type="text" placeholder="File Name" value="document.html" onkeyup="setFileName(this.value)">
+
+      <right style="float:right"><button onclick="download()">Download</button>
+        <button onclick="window.print()">Print</button></right>
+      <div class="file-wrap">
+        <div class="button-wrap">
+          <label for="upload">Open</label>
+          <input id="upload" type="file" accept"text/.html" onchange="openFile(this)">
+        </div>
+        <div class="clear"></div>
+      </div>
+
+      <div class="clear"></div>
+    </header>
+    <div class="toolbar">
+      <section><i onkeypress="onEnter(() => {format('justifyLeft')})" onclick="format('justifyLeft')" title="align left" tabindex="0">format_align_left</i>
+        <i onkeypress="onEnter(() => {format('justifyCenter')})" onclick="format('justifyCenter')" title="align center" tabindex="0">format_align_center</i>
+        <i onkeypress="onEnter(() => {format('justifyRight')})" onclick="format('justifyRight')" title="align right" tabindex="0">format_align_right</i>
+        <i onkeypress="onEnter(() => {format('justifyFull')})" onclick="format('justifyFull')" title="align block" tabindex="0">format_align_justify</i></section>
+
+      <section><i onkeypress="onEnter(() => {format('bold')})" onclick="format('bold')" title="bold" tabindex="0">format_bold</i>
+        <i onkeypress="onEnter(() => {format('italic')})" onclick="format('italic')" title="italic" tabindex="0">format_italic</i>
+        <i onkeypress="onEnter(() => {format('underline')})" onclick="format('underline')" title="italic" tabindex="0">format_underlined</i>
+        <i onkeypress="onEnter(() => {format('strikeThrough')})" onclick="format('strikeThrough')" title="cross out" tabindex="0">format_strikethrough</i></section>
+
+      <section><i onkeypress="onEnter(() => {format('cut')})" onclick="format('cut')" title="cut text" tabindex="0">content_cut</i>
+        <i onkeypress="onEnter(() => {format('copy')})" onclick="format('copy')" title="copy text" tabindex="0">content_copy</i>
+        <i onkeypress="onEnter(() => {format('paste')})" onclick="format('paste')" title="paste text" tabindex="0">content_paste</i></section>
+
+      <section><i onkeypress="onEnter(() => {format('insertunorderedlist')})" onclick="format('insertunorderedlist')" title="list" tabindex="0">format_list_bulleted</i>
+        <i onkeypress="onEnter(() => {format('insertOrderedlist')})" onclick="format('insertOrderedlist')" title="numbered list tabindex=" 0"">format_list_numbered</i></section>
+
+      <section><i onkeypress="onEnter(() => {format('createLink', window.prompt('link url'))})" onclick="format('createLink', window.prompt('link url'))" title="link" tabindex="0">link</i>
+        <i onkeypress="onEnter(() => {format('insertImage', window.prompt('image url'))})" onclick="format('insertImage', window.prompt('image url'))" title="image" tabindex="0">image</i>
+        <i onkeypress="onEnter(() => {format('insertHTML', window.prompt('paste HTML code'))})" onclick="format('insertHTML', window.prompt('paste HTML code'))" title="insert HTML" tabindex="0">code</i>
+        <i onkeypress="onEnter(() => {format('removeFormat')})" onclick="format('removeFormat')" title="remove formating" tabindex="0">format_clear</i></section>
+
+      <section>
+        <select name="font" onchange="changeFont()" id="font">
+          <option value="" disabled selected></option>
+          <option value="ubuntu, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'">System Font</option>
+          <option value="inherit">Inherit (no font)</option>
+          <option value="sans">Sans</option>
+          <option value="sansserif">Sans Serif</option>
+          <option value="helvetica">helvetica</option>
+        </select>
+      </section>
+
+
+      <section><i onkeypress="onEnter(() => {format('increaseFontSize')})" onclick="format('increaseFontSize')" title="increase font size" tabindex="0">add</i>
+        <i onkeypress="onEnter(() => {format('decreaseFontSize')})" onclick="format('decreaseFontSize')" title="decrease font size" tabindex="0">remove</i></section>
+      <section><i onclick="format('hiliteColor', 'yellow');format('foreColor', 'black')" title="highlight" tabindex="0">palette</i>
+        <i onkeypress="onEnter(() => {format('foreColor', 'red')})" onclick="format('foreColor', 'red')" title="text color" tabindex="0">palette</i></section>
+
+      <section><i onkeypress="onEnter(() => {format('undo')})" onclick="format('undo')" title="undo">undo</i>
+        <i onkeypress="onEnter(() => {format('redo')})" onclick="format('redo')" title="redo">redo</i></section>
+    </div>
+
+    <article class="page" id="page" contenteditable onclick="pageClick()">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+      irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </article>
+  </main>
+
+
+  <script src="js/ice.js" charset="utf-8"></script>
+  <script src="js/shortcut.js" charset="utf-8"></script>
+  <script src="js/main.js" charset="utf-8"></script>
+</body>
+
+</html>

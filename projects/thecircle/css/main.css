@@ -1,0 +1,360 @@
+center {
+  max-width: calc(100% - 40px);
+  clear: both;
+}
+
+body {
+  background: #999;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  transition: 0.2s;
+}
+header center {
+  margin: auto;
+  width: 1440px;
+  position: relative;
+  margin-top: 50px;
+}
+header center .left img {
+  height: 80px;
+  width: auto;
+}
+header center .left section {
+  font-size: 40px;
+  position: absolute;
+  top: 20px;
+  margin-left: 20px;
+}
+header center .right a {
+  font-size: 20px;
+  margin-left: 10px;
+  margin-top: 30px;
+}
+header * {
+  transition: 0.2s;
+}
+@media (max-width: 650px) {
+  header {
+    padding-bottom: 7px;
+  }
+  header center {
+    margin-top: 10px;
+  }
+  header center .left img {
+    height: 64px;
+    width: auto;
+  }
+  header center .left section {
+    font-size: 30px;
+    position: absolute;
+    top: 17px;
+    margin-left: 20px;
+  }
+  header center .right a {
+    margin-left: 10px;
+    margin-top: 22px;
+  }
+}
+
+header.down {
+  background-color: black;
+  padding-bottom: 7px;
+}
+header.down center {
+  margin-top: 10px;
+  color: white;
+}
+header.down center .left img {
+  height: 64px;
+  width: auto;
+}
+header.down center .left section {
+  font-size: 30px;
+  position: absolute;
+  top: 17px;
+  margin-left: 20px;
+}
+header.down center .right a {
+  margin-left: 10px;
+  margin-top: 22px;
+}
+
+.title-section {
+  margin-top: calc(50vh - 128px);
+}
+.title-section center {
+  margin: auto;
+  width: 640px;
+  text-align: center;
+}
+.title-section center h1 {
+  font-size: 48px;
+  margin-bottom: 14px;
+}
+.title-section center p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.title-section center .button {
+  margin: auto;
+}
+
+.content {
+  position: relative;
+  margin-top: 250px;
+}
+.content .wave {
+  height: 200px;
+  margin-top: -200px;
+  margin-bottom: -100px;
+  width: 100%;
+  background: #111;
+  border-radius: 50% 50% 0 0;
+  z-index: -10;
+}
+.content .features {
+  background: #111;
+  color: white;
+  z-index: 10;
+  padding-bottom: 20px;
+}
+.content .features center {
+  margin: auto;
+  width: 1010px;
+}
+.content .features center section {
+  display: inline-block;
+  width: calc(33% - (80px/3) - 3px);
+  box-sizing: border-box;
+  padding: 25px;
+}
+.content .features center section div {
+  position: relative;
+  margin-bottom: 10px;
+}
+.content .features center section div img {
+  height: 60px;
+  width: auto;
+}
+.content .features center section div h2 {
+  display: inline-block;
+  font-size: 30px;
+  position: absolute;
+  top: 15px;
+  margin-left: 10px;
+}
+.content .features center section p {
+  font-size: 18px;
+}
+.content .logos {
+  background-color: black;
+  text-align: center;
+}
+.content .logos center {
+  display: inline-block;
+  padding: 20px 0;
+  margin: auto;
+}
+.content .logos center img {
+  margin-left: 30px;
+  height: 50px;
+  width: auto;
+}
+.content .logos center img:nth-child(1) {
+  margin-left: 0;
+}
+.content .section1 {
+  background-color: #111;
+  color: white;
+}
+.content .section1 center {
+  clear: both;
+  width: 1010px;
+  margin: auto;
+  padding: 30px 0;
+}
+.content .section1 center .right {
+  float: right;
+  width: 30%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+@media (max-width: 800px) {
+  .content .section1 center .right {
+    float: none;
+  }
+}
+.content .section1 center .right img {
+  width: 100%;
+  height: auto;
+}
+.content .section1 center .left {
+  float: left;
+  width: 70%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.content .section1 center .left h2 {
+  font-size: 40px;
+}
+.content .section1 center .left p {
+  font-size: 22px;
+}
+.content .section1 center .button1 {
+  margin-top: 20px;
+}
+.content .section1 center div {
+  clear: both;
+}
+.content .boxes {
+  padding: 40px 0;
+}
+.content .boxes center {
+  width: 1010px;
+  margin: auto;
+}
+.content .boxes center section {
+  clear: both;
+  width: 49%;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 15px;
+}
+.content .boxes center section section {
+  width: 100%;
+  user-select: none;
+}
+.content .boxes center section section img {
+  float: left;
+  width: 30%;
+  height: auto;
+  display: inline-block;
+  margin-top: 10px;
+}
+.content .boxes center section section section {
+  width: 70%;
+}
+.content .boxes center section section section h3 {
+  font-size: 28px;
+}
+.content .boxes center section section section p {
+  font-size: 18px;
+}
+.content .boxes center section section div {
+  clear: both;
+}
+.content .section2 {
+  background-color: #111;
+  color: white;
+}
+.content .section2 center {
+  clear: both;
+  width: 1010px;
+  margin: auto;
+  padding: 30px 0;
+}
+.content .section2 center .left {
+  float: left;
+  width: 40%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.content .section2 center .left img {
+  width: 100%;
+  height: auto;
+}
+.content .section2 center .right {
+  float: right;
+  width: 60%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.content .section2 center .right h2 {
+  font-size: 40px;
+}
+.content .section2 center .right p {
+  font-size: 22px;
+}
+.content .section2 center .button1 {
+  margin-top: 20px;
+}
+.content .section2 center div {
+  clear: both;
+}
+
+.footer-wave {
+  height: 60px;
+  background-color: black;
+  border-radius: 50% 50% 0 0;
+}
+
+footer {
+  background-color: black;
+  padding-bottom: 30px;
+  margin-top: -10px;
+  color: white;
+}
+footer center {
+  margin: auto;
+  width: 1440px;
+  position: relative;
+}
+footer center .left a {
+  clear: both;
+}
+footer center .left a img {
+  height: 80px;
+  width: auto;
+}
+footer center .left a section {
+  font-size: 40px;
+  position: absolute;
+  top: 20px;
+  margin-left: 20px;
+}
+footer center .left p {
+  clear: both;
+  position: relative;
+  left: 19px;
+  font-size: 14px;
+}
+footer center .right a {
+  font-size: 20px;
+  margin-left: 10px;
+  margin-top: 30px;
+}
+footer center div {
+  clear: both;
+}
+
+@media (max-width: 800px) {
+  .bend {
+    width: 90% !important;
+    margin: 0 !important;
+  }
+}
+@media (max-width: 650px) {
+  nav {
+    display: none !important;
+  }
+
+  div.wave {
+    border-radius: 0 !important;
+    height: 120px !important;
+  }
+
+  h1 {
+    font-size: 40px !important;
+  }
+}
+@media (max-height: 545px) {
+  header:not(.down) {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

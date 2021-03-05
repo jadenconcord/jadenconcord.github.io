@@ -1,0 +1,124 @@
+@import 'theme';
+@import 'elemental';
+
+.toolbar i {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  user-select: none;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+}
+
+body{
+  background: $bg2;
+}
+
+body>main{
+  max-width: 8.5in;
+  margin: 0 auto;
+  background: $bg4;
+  min-height: 100vh;
+
+  header{
+    background: $bg0;
+    padding: .4rem;
+  }
+
+  .toolbar{
+    display: flex;
+    flex-wrap: wrap;
+
+    section{
+      margin: .5rem;
+
+      i{
+        font-size: 1.7rem;
+        outline: none !important;
+        background: $bg2;
+        border: $border-width solid $bg1;
+        padding: .2rem;
+        margin: 0;
+        float: left;
+        user-select: none;
+        &:hover{
+          background: $bg3;
+          border-color: $theme2;
+          cursor: pointer;
+        }
+        &:focus{
+          border-color: $theme2;
+        }
+        &:active{
+          transition: 0;
+        }
+
+        &:first-child{
+          border-top-left-radius: $radius1;
+          border-bottom-left-radius: $radius1;
+        }
+        &:last-child{
+          border-top-right-radius: $radius1;
+          border-bottom-right-radius: $radius1;
+        }
+      }
+    }
+  }
+
+  .page{
+    @include section;
+    font-family: "Liberation Serif";
+    width: 8.5in;
+    background: $bg0;
+    color: $fg0;
+    padding: 1in;
+    font-size: 12pt;
+    min-height: 11in;
+    outline: none !important;
+
+    p{
+      margin-top: 16px;
+    }
+  }
+}
+
+@media print {
+  @page { margin: 0; }
+
+  header{
+    display: none;
+  }
+
+  .toolbar{
+    display: none !important;
+  }
+
+  .page{
+    width: 100% !important;
+    min-height: 0 !important;
+    background: #fff;
+    padding: 0 !important;
+    color: #000 !important;
+  }
+
+  body{
+    background: #fff !important;
+    margin: 1in !important;
+  }
+
+  main{
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}

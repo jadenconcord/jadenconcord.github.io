@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+button, input[type=button] {
+  border: 0;
+  background: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+button:hover, input[type=button]:hover {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  user-select: none;
+}
+
+center {
+  text-align: inherit;
+}
+
+.left {
+  float: left;
+}
+.left * {
+  display: inline-block;
+}
+
+.right {
+  float: right;
+}
+.right * {
+  display: inline-block;
+}
+
+center {
+  clear: both;
+}
+
+/*# sourceMappingURL=default.css.map */

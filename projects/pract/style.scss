@@ -1,0 +1,116 @@
+
+$dark: #3f3f4d;
+$black: #252530;
+$darker: #1e1e2a;
+$white: #c2c5d5;
+$white-dim: #c2c5d520;
+
+$theme: #DC3E4A;
+
+$background: #87859B;
+
+:root {
+  font-size: 4px;
+}
+
+*{
+  font-size: 5rem;
+  padding: 0;
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+body{
+  background: $dark;
+}
+
+header {
+  user-select: none;
+  background: $black;
+  color: $white;
+  padding: 2rem 4rem;
+  border-bottom: 3px solid $darker;
+
+  nav{
+    float: right;
+    word-spacing: 1rem;
+  }
+  span{
+    font-weight: bold;
+    color: $theme;
+  }
+}
+
+main{
+  color: $white;
+  padding: 1rem;
+
+  .question{
+    border: 3px solid $white-dim;
+    padding: 3rem;
+    border-radius: 2rem;
+    height: 350px;
+
+    h1{
+      font-size: 6rem;
+    }
+
+    #box{
+      width: 330px;
+      height: 210px;
+      background: $theme;
+      margin: 20px auto;
+    }
+  }
+  .input{
+    padding: 3rem;
+
+    ul{
+      list-style: none;
+      li{
+        background: $theme;
+        display: block;
+        width: 75rem;
+        margin-top: 5rem;
+        padding: 2rem;
+        font-weight: bold;
+        border-radius: 2rem;
+        border: 3px solid transparent;
+        transition: 0.2s ease;
+        user-select: none;
+        &:hover{
+          border: 3px solid $theme;
+          background: transparent;
+          cursor: pointer;
+          color: $theme;
+        }
+        &:active{
+          transition: 0s;
+          border-color: $darker;
+          color: $darker;
+          background: $theme;
+        }
+        &.correct{
+          background: green;
+          border-color: $darker;
+          color: $darker;
+        }
+        &.incorrect{
+          opacity: 0.5;
+          background: $theme;
+          color: inherit;
+          border-color: transparent;
+        }
+      }
+
+    }
+  }
+}

@@ -1,0 +1,291 @@
+$theme-color: #5485CC;
+$theme-color-dark: #386dbc;
+$theme-dark: #222;
+$theme-darker: #111;
+$text-black: #111;
+$text-white: #eee;
+
+body {
+  font-family: comfortaa;
+}
+
+::selection {
+  color: $text-black;
+  background: $theme-color;
+}
+
+body {
+  background: #bbb;
+}
+
+button.button1 {
+  color: $theme-color-dark;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: 700;
+  font-size: 25px;
+  border: 3px solid $theme-color-dark;
+  transition: 0.3s;
+  box-shadow: inset 0 0 $theme-color-dark;
+  display: inline-block;
+  user-select: none;
+}
+
+button.button1:hover {
+  cursor: pointer;
+  box-shadow: inset 290px 0 $theme-color-dark;
+  color: #bbb;
+}
+
+button.button1:active {
+  box-shadow: inset 290px 0 transparent;
+  color: $theme-color-dark;
+  cursor: pointer;
+}
+////////////
+// Header //
+////////////
+
+nav {
+  user-select: none;
+
+  a {
+    position: relative;
+  }
+
+  a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 3px;
+    left: 50%;
+    position: absolute;
+    background: $theme-color;
+    transition: width 0.2s ease 0s, left 0.2s ease 0s;
+    width: 0;
+    border-radius: 30px;
+  }
+
+  a:hover:after {
+    width: 100%;
+    left: 0;
+  }
+}
+
+header {
+  z-index: 20;
+  box-shadow: -100vw 4px $theme-color;
+
+  center {
+    .left {
+      img {
+        transition: 0.6s ease;
+      }
+
+      section {
+        transition: color 0s, font-size 0.6s ease !important;
+      }
+    }
+
+    .right {
+      a {}
+    }
+  }
+  transition: background 0.2s;
+
+  * {
+    transition: 0.2s;
+  }
+}
+
+header.down {
+  transition: box-shadow 1s;
+  background-color: $text-black;
+  box-shadow: 0 4px 0 $theme-color;
+
+  center {
+    color: $text-white;
+
+    .left {
+      a {
+        img {
+          transform: rotate(360deg);
+        }
+
+        section {}
+      }
+    }
+
+    .right {
+      a {}
+    }
+  }
+}
+///////////////////
+// Title Section //
+///////////////////
+
+.title-section {
+  center {
+    h1 {}
+
+    p {}
+
+    .button {}
+  }
+}
+
+.content {
+  .wave {
+    box-shadow: 0 0 0 4px $theme-color;
+    background-color: $theme-dark;
+  }
+  // Features section //
+  .features {
+    background-color: $theme-dark;
+
+    center {
+      section {
+        border-radius: 10px;
+        transition: 0.2s;
+        user-select: none;
+        margin-left: 40px;
+
+        div {
+          img {
+            transition: 0.2s;
+          }
+
+          h2 {}
+        }
+      }
+
+      section:nth-child(1) {
+        margin-left: 0;
+      }
+
+      section:hover {
+        background: #ffffff0c;
+
+        div {
+          img {
+            transform: rotate(90deg);
+          }
+        }
+      }
+    }
+  }
+  // Logos Section //
+  .logos {
+    background-color: $theme-darker;
+
+    center {
+      color: $text-white;
+      font-size: 30px;
+
+      section {
+        display: inline;
+        position: relative;
+        top: -15px;
+      }
+
+      img {}
+
+      img:nth-child(1) {}
+    }
+  }
+  // Section 1 //
+  .section1,
+  .section2 {
+    background-color: $theme-dark;
+    color: $text-white;
+
+    center {
+      .left {
+        img {}
+      }
+
+      .right {
+        h2 {}
+
+        p {}
+      }
+
+      .button {}
+
+      div {}
+    }
+  }
+
+  .boxes {
+    background: $theme-darker;
+
+    center {
+      section {
+        color: $text-white;
+
+        section {
+          transition: 0.2s;
+          border-radius: 10px;
+
+          img {
+            transition: 0.2s;
+          }
+
+          section {
+            h3 {}
+          }
+
+          div {}
+        }
+      }
+    }
+  }
+
+  .boxes center > section > section:hover {
+    background: #ffffff0c;
+    transform: rotate(3deg);
+
+    img {
+      transform: scale(1.14) rotate(-3deg);
+    }
+  }
+
+  .boxes center > section:nth-child(even) > section:hover {
+    transform: rotate(-3deg);
+
+    img {
+      transform: scale(1.14) rotate(3deg);
+    }
+  }
+}
+////////////
+// Footer //
+////////////
+
+.footer-wave {
+  background-color: $theme-darker;
+  border-radius: 50% 50% 0 0;
+}
+
+footer {
+  background-color: $theme-darker;
+  color: $text-white;
+
+  center {
+    .left {
+      img {}
+
+      section {}
+
+      p {}
+    }
+
+    .right {
+      a {}
+    }
+
+    div {}
+  }
+}

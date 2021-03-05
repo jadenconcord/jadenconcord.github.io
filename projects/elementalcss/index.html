@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <header>
+    This is the header
+  </header>
+  <main>
+    <h1>CSS Defaults</h1>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h2 class="h-border">.h-border</h2>
+    <h3>Heading 3</h3>
+    <h3 class="h-border">Border</h3>
+    <h4>Heading 4</h4>
+    <h4 class="h-border">Heading</h4>
+    <hr>
+
+    <a href="#">This is a link</a>
+    <p>Here is a <a href="#">link</a> to click</p>
+    <p>This is a fancy <a href="#" class="fancy">navigation link</a></p>
+    <button class="b2" type="button">Button</button><br>
+    <button class="b1" type="button">Button</button>
+    <input type="text" name="" value="Some input">
+    <input type="date" name="" value="">
+    <input type="range" name="" value="">
+    <input type="time" name="" value="">
+
+    <button class="b1" onclick="document.querySelector('html').style.fontSize = '14px'">Small Font</button>
+    <button class="b1" onclick="document.querySelector('html').style.fontSize = '16px'">Normal Font</button>
+    <button class="b1" onclick="document.querySelector('html').style.fontSize = '20px'">Big Font</button>
+
+    <pre><code>var test = (a) => a*a/Math.sqrt(a)</code></pre>
+
+    <div class="color-wrap">
+      <input class="reset-input" id="color_main" placeholder="#XXXXXX" value="#d95448" type="text" onkeyup="$('#color_main-inputbox').value = this.value">
+      <input id="color_main-inputbox" value="#d95448" type="color" onchange="$('#color_main').value = this.value">
+    </div>
+
+    <select name="cars">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>
+
+    <label class="switch">
+      <input type="checkbox" id="yesorno">
+      <span class="slider"></span>
+    </label><label for="yesorno" class="switch-label">Yes or No?</label>
+
+
+    <p>This is a paragraph</p>
+    <label class="checkbox">Check box?
+      <input type="checkbox">
+      <span class="checkmark"></span>
+    </label>
+    <label class="radio">One
+      <input type="radio" value="1" name="radio" checked>
+      <span class="checkmark"></span>
+    </label>
+    <label class="radio">Two
+      <input type="radio" value="2" name="radio">
+      <span class="checkmark"></span>
+    </label>
+
+    <textarea>This is a textarea</textarea>
+
+    <ul>
+      <li>one</li>
+      <li>two</li>
+      <li>three</li>
+    </ul>
+    <ol>
+      <li>Ay</li>
+      <li>Bee</li>
+      <li>Sea</li>
+    </ol>
+
+
+
+    <div class="file-wrap">
+      <div class="button-wrap">
+        <label class="b2" for="upload">Upload Document</label>
+        <input id="upload" type="file" accept".doc,.docx,.odt,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="file-wrap">
+      <div class="button-wrap">
+        <label class="b1" for="upload2">Upload Files</label>
+        <input id="upload2" type="file" multiple>
+      </div>
+      <div class="clear"></div>
+    </div>
+
+
+    <h1>The kbd element</h1>
+
+    <p>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy text (Linux/Windows).</p>
+
+    <p>Press <kbd>Cmd</kbd> + <kbd>C</kbd> to copy text (Mac OS).</p>
+
+    <table>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+      </tr>
+      <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+      </tr>
+      <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+      </tr>
+    </table>
+
+
+  </main>
+</body>
+
+</html>

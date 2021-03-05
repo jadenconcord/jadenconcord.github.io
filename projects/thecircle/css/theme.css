@@ -1,0 +1,168 @@
+body {
+  font-family: comfortaa;
+}
+
+::selection {
+  color: #111;
+  background: #5485CC;
+}
+
+body {
+  background: #bbb;
+}
+
+button.button1 {
+  color: #386dbc;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: 700;
+  font-size: 25px;
+  border: 3px solid #386dbc;
+  transition: 0.3s;
+  box-shadow: inset 0 0 #386dbc;
+  display: inline-block;
+  user-select: none;
+}
+
+button.button1:hover {
+  cursor: pointer;
+  box-shadow: inset 290px 0 #386dbc;
+  color: #bbb;
+}
+
+button.button1:active {
+  box-shadow: inset 290px 0 transparent;
+  color: #386dbc;
+  cursor: pointer;
+}
+
+nav {
+  user-select: none;
+}
+nav a {
+  position: relative;
+}
+nav a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 3px;
+  left: 50%;
+  position: absolute;
+  background: #5485CC;
+  transition: width 0.2s ease 0s, left 0.2s ease 0s;
+  width: 0;
+  border-radius: 30px;
+}
+nav a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+header {
+  z-index: 20;
+  box-shadow: -100vw 4px #5485CC;
+  transition: background 0.2s;
+}
+header center .left img {
+  transition: 0.6s ease;
+}
+header center .left section {
+  transition: color 0s, font-size 0.6s ease !important;
+}
+header * {
+  transition: 0.2s;
+}
+
+header.down {
+  transition: box-shadow 1s;
+  background-color: #111;
+  box-shadow: 0 4px 0 #5485CC;
+}
+header.down center {
+  color: #eee;
+}
+header.down center .left a img {
+  transform: rotate(360deg);
+}
+.content .wave {
+  box-shadow: 0 0 0 4px #5485CC;
+  background-color: #222;
+}
+.content .features {
+  background-color: #222;
+}
+.content .features center section {
+  border-radius: 10px;
+  transition: 0.2s;
+  user-select: none;
+  margin-left: 40px;
+}
+.content .features center section div img {
+  transition: 0.2s;
+}
+.content .features center section:nth-child(1) {
+  margin-left: 0;
+}
+.content .features center section:hover {
+  background: #ffffff0c;
+}
+.content .features center section:hover div img {
+  transform: rotate(90deg);
+}
+.content .logos {
+  background-color: #111;
+}
+.content .logos center {
+  color: #eee;
+  font-size: 30px;
+}
+.content .logos center section {
+  display: inline;
+  position: relative;
+  top: -15px;
+}
+.content .section1,
+.content .section2 {
+  background-color: #222;
+  color: #eee;
+}
+.content .boxes {
+  background: #111;
+}
+.content .boxes center section {
+  color: #eee;
+}
+.content .boxes center section section {
+  transition: 0.2s;
+  border-radius: 10px;
+}
+.content .boxes center section section img {
+  transition: 0.2s;
+}
+.content .boxes center > section > section:hover {
+  background: #ffffff0c;
+  transform: rotate(3deg);
+}
+.content .boxes center > section > section:hover img {
+  transform: scale(1.14) rotate(-3deg);
+}
+.content .boxes center > section:nth-child(even) > section:hover {
+  transform: rotate(-3deg);
+}
+.content .boxes center > section:nth-child(even) > section:hover img {
+  transform: scale(1.14) rotate(3deg);
+}
+
+.footer-wave {
+  background-color: #111;
+  border-radius: 50% 50% 0 0;
+}
+
+footer {
+  background-color: #111;
+  color: #eee;
+}
+
+/*# sourceMappingURL=theme.css.map */

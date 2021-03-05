@@ -1,0 +1,101 @@
+:root {
+  font-size: 4px;
+}
+
+* {
+  font-size: 5rem;
+  padding: 0;
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+body {
+  background: #3f3f4d;
+}
+
+header {
+  user-select: none;
+  background: #252530;
+  color: #c2c5d5;
+  padding: 2rem 4rem;
+  border-bottom: 3px solid #1e1e2a;
+}
+header nav {
+  float: right;
+  word-spacing: 1rem;
+}
+header span {
+  font-weight: bold;
+  color: #DC3E4A;
+}
+
+main {
+  color: #c2c5d5;
+  padding: 1rem;
+}
+main .question {
+  border: 3px solid #c2c5d520;
+  padding: 3rem;
+  border-radius: 2rem;
+  height: 350px;
+}
+main .question h1 {
+  font-size: 6rem;
+}
+main .question #box {
+  width: 330px;
+  height: 210px;
+  background: #DC3E4A;
+  margin: 20px auto;
+}
+main .input {
+  padding: 3rem;
+}
+main .input ul {
+  list-style: none;
+}
+main .input ul li {
+  background: #DC3E4A;
+  display: block;
+  width: 75rem;
+  margin-top: 5rem;
+  padding: 2rem;
+  font-weight: bold;
+  border-radius: 2rem;
+  border: 3px solid transparent;
+  transition: 0.2s ease;
+  user-select: none;
+}
+main .input ul li:hover {
+  border: 3px solid #DC3E4A;
+  background: transparent;
+  cursor: pointer;
+  color: #DC3E4A;
+}
+main .input ul li:active {
+  transition: 0s;
+  border-color: #1e1e2a;
+  color: #1e1e2a;
+  background: #DC3E4A;
+}
+main .input ul li.correct {
+  background: green;
+  border-color: #1e1e2a;
+  color: #1e1e2a;
+}
+main .input ul li.incorrect {
+  opacity: 0.5;
+  background: #DC3E4A;
+  color: inherit;
+  border-color: transparent;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>HOY</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <header>
+    HOY
+  </header>
+
+  <main class="content">
+    Loading...
+    <template></template>
+  </main>
+
+  <aside>
+    <template>
+      {each items item i}
+      <section onclick="selectItem({i})" onkeypress="onEnter(selectItem, {i})" tabindex="0" class="{item.active ? 'active' : ''}">
+        <span>{item.name}</span>
+      </section>
+      {/each}
+    </template>
+  </aside>
+
+  <template id="page0">
+    <h1>Todo</h1>
+    <hr><br>
+    <center><input type="text" id="add-task-input" autocomplete="off" placeholder="Add Task" onkeypress="onEnter(addTask)">
+      <button onclick="addTask()">Add</button></center>
+    <br>
+    {each tasks task i}
+    <div><button style="margin-right: .5rem" onclick="removeTask({i})">X</button> {task.name}</div>
+    {/each}
+    <br><button class="b2" onclick="selectItem(1)">Next</button>
+  </template>
+
+  <template id="page1">
+    <h1>Today</h1>
+    <hr><br>
+    <h3>Select tasks you would like to do today</h3>
+    {each tasks task i}
+    {inputCheckbox name="[task.name]" label="[task.name]" checked="[task.today]" onchange="changeToday([i], this.checked)"/}
+    {/each}
+    <br><button class="b2" onclick="selectItem(2)">Next</button>
+  </template>
+
+  <template id="page2">
+    <h1>Schedule</h1>
+    <hr><br>
+    {repeat 8 i}
+    {inputSelect name="b[i]" label="Work block [i]" options="[getTaskOptions(i)]" onchange="setBlock([i], this)" /}
+    {/repeat}
+
+    <br><br><button class="b2" onclick="selectItem(3)">Start Day</button>
+  </template>
+
+  <template id="page3">
+    <h1>View Today</h1>
+    <hr>
+    <center><div class="clock-outer">
+      <a href="#" onclick="localStorage.removeItem('hoyTime'); startTimer()">Reset Timer</a>
+      <br>
+      <div class="clock">00:00:00</div><br>
+      <button onclick="startTimer()" class="b2 start-timer">START</button>
+      <button onclick="subFromTimer()">-</button>
+      <button onclick="addToTimer()">+</button>
+    </div></center><br>
+
+    {repeat 8}
+    <section class="block block{i}"><span>Work Block {i} (45)</span>
+      <strong>{getBlockTask(i)}</strong></section>
+    <section class="break break{i}">Break<span>Break {i} (15)</span><div class="clear"></div></section>
+    {/repeat}
+  </template>
+
+
+  <script src="js/ice.js" charset="utf-8"></script>
+  <script src="js/shortcut.js" charset="utf-8"></script>
+  <script src="js/main.js" charset="utf-8"></script>
+</body>
+
+</html>
