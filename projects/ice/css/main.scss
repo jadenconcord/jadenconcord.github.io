@@ -1,0 +1,13 @@
+@import 'theme';
+@import 'elemental';
+
+main{
+  @include content;
+  max-width: 600px;
+  margin: 0 auto;
+  background: $bg4;
+  min-height: 100vh;
+  border-left: $border-width solid $theme;
+  border-right: $border-width solid $theme;
+  padding: 2rem;
+}

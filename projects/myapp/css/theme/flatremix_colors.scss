@@ -1,0 +1,44 @@
+// Theme Flat remix
+
+// Options (you can change these)
+
+$theme: #427eee;
+$theme-secondary: #427eee;
+$black-darker: #24262c;
+$black-lighter: #383c46;
+$white-lighter: #ffffff;
+$white-darker: #d2d1d1;
+$border-width: 1px;
+$border-radius1: 6px;
+$border-radius2: 12px;
+$transition-time: 0.3s;
+
+// Variables (try not to use fixed values here)
+
+$theme-dark: saturate(darken($theme, 5%), 5%);
+$theme-bright: desaturate(lighten($theme, 5%), 5%);
+
+$theme2: $theme-secondary;
+$theme2-dark: saturate(darken($theme2, 5%), 5%);
+$theme2-bright: desaturate(lighten($theme2, 5%), 5%);
+
+$theme-red: adjust-hue($theme, - hue($theme) );
+$theme-yellow: adjust-hue($theme, - hue($theme) + 60deg);
+$theme-green: adjust-hue($theme, - hue($theme) + 120deg);
+$theme-blue: adjust-hue($theme, - hue($theme) + 240deg);
+
+$black1: $black-darker;
+$black4: $black-lighter;
+$black2: mix($black1, $black4, 75%);
+$black3: mix($black1, $black4, 25%);
+$black0: saturate(darken($black1, 5%), 5%);
+$black5: mix($black1, $white-lighter, 80%);
+
+$white1: $white-lighter;
+$white4: $white-darker;
+$white2: mix($white1, $white4, 75%);
+$white3: mix($white1, $white4, 25%);
+$white0: desaturate(lighten($white1, 5%), 5%);
+
+$border-radius0: $border_radius1 / 2;
+$border-radius3: $border_radius2 * 2;

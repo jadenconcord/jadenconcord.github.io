@@ -1,0 +1,10 @@
+<h1>Account</h1>
+<p>{localDataMode ? 'Your account is stored on your computer' : 'Your account is synced online'}</p><br>
+<button class="b1">{localDataMode ? 'connect online account' : 'switch to local account'}</button>
+
+
+<br><br><h2 class="h-border">General</h2><br>
+<button class="b1">Download Data</button>
+<button class="b1">Restore Data</button>
+<br><br><h2 class="h-border">Danger</h2><br>
+<button class="b1 red" onclick="resetData()">Delete Data</button>

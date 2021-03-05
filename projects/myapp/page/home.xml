@@ -1,0 +1,6 @@
+<h1>Home</h1>
+<p>Hello {name}!</p>
+
+<p>Try the <a onclick="page('page/editor.xml')">Editor</a></p>
+<p>Or install some <a onclick="page('page/extentions.xml')">Extentions</a></p>
+<p>Find a <a onclick="page('page/themes.xml')">Theme</a></p>

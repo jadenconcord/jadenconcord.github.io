@@ -1,0 +1,6 @@
+{
+  "onInstall": "window.location.reload()",
+  "onRemove": "window.location.reload()",
+  "onStart": "$('header .left input').att('placeholder', 'Search / page URL'); $('header .left input').onkeyup = (event) => {event.keyCode === 13 && page($('header .left input').value) + $('header .left input').blur()}",
+  "onPage": "(page) => {$('header .left input').value = page}"
+}

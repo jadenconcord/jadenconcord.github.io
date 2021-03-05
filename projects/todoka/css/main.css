@@ -1,0 +1,1169 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #9ea3bb #0000;
+  font-family: Ubuntu, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+body {
+  background: #343c57;
+}
+
+i {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  user-select: none;
+}
+
+::selection {
+  background: #efefef;
+  color: #5b48e9;
+}
+
+::placeholder {
+  color: #b6bbc9;
+  opacity: 0.5;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0000;
+  margin: 2px 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9ea3bb;
+}
+
+.clear {
+  clear: both;
+}
+
+aside {
+  width: 300px;
+  background: #191d31;
+  position: fixed;
+  height: 100%;
+  color: #9ea3bb;
+  border-bottom: 4px solid #5b48e9;
+  box-shadow: 2px 0 0 #090b1d;
+}
+@media (max-width: 650px) {
+  aside {
+    width: 100%;
+  }
+}
+aside header {
+  background: #090b1d;
+  color: #b6bbc9;
+  padding: 8px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid #212945;
+}
+aside header i {
+  font-size: 28px;
+  transition: 0.2s;
+  border-radius: 30px;
+  padding: 3px;
+  margin: -3px;
+}
+aside header i:hover {
+  background: #343c57;
+  cursor: pointer;
+  color: #d2d5de;
+}
+aside header i:active {
+  transition: 0s;
+  background: #5b48e9;
+  color: #efefef;
+}
+aside header .left {
+  float: left;
+}
+aside header .right {
+  float: right;
+}
+aside .list {
+  font-size: 18px;
+  overflow-y: auto;
+}
+aside .list > div {
+  transition: 0.1s;
+  padding: 12px;
+  overflow: auto;
+  border-left: 3px solid #0000;
+  user-select: none;
+}
+aside .list > div .left {
+  float: left;
+}
+aside .list > div .left i {
+  display: inline-block;
+  font-size: 24px;
+  float: left;
+  margin-right: 4px;
+}
+aside .list > div .left span {
+  float: right;
+}
+aside .list > div .right {
+  float: right;
+  color: #565c81;
+}
+aside .list > div[selected] {
+  background: #343c57;
+  border-color: #5b48e9;
+  color: #d2d5de;
+}
+aside .list > div[selected] .icon {
+  background: #9ea3bb;
+}
+aside .list > div[selected] .right {
+  color: #9ea3bb;
+}
+aside .list > div:hover {
+  cursor: pointer;
+}
+aside .list > div:hover:not([selected]) {
+  background: #212945;
+  color: #b6bbc9;
+}
+aside .list > div:hover:not([selected]) .icon {
+  background: #9ea3bb;
+}
+aside .list > div:active:not([nothing]) {
+  transition: 0s;
+  background: #5b48e9;
+  color: #efefef;
+}
+aside .list > div:active:not([nothing]) .icon {
+  background: #efefef;
+}
+aside .list > div:active:not([nothing]) .right {
+  color: #efefef;
+}
+
+main {
+  color: #d2d5de;
+  background: #343c57;
+  margin-left: 300px;
+  overflow-y: auto;
+  height: 100vh;
+  background-size: cover;
+}
+@media (max-width: 650px) {
+  main {
+    display: none;
+    width: 100%;
+    margin-left: 0;
+  }
+  main .center {
+    padding-bottom: 80px !important;
+  }
+}
+main .center {
+  width: 880px;
+  max-width: 100%;
+  margin: 0 auto;
+  font-size: 20px;
+  padding: 16px 20px 0;
+}
+main .center h1 {
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  color: #d2d5de;
+  text-shadow: 0px 0px 4px #212945;
+}
+main .center h2 {
+  border-left: 3px solid #5b48e9;
+  padding-left: 8px;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #d2d5de;
+}
+main .center a {
+  color: #9ea3bb;
+  text-decoration: underline;
+  margin-bottom: 8px;
+}
+main .center ul, main .center ol {
+  margin-left: 20px;
+}
+main .center .duedateselect {
+  display: none;
+}
+main .center button,
+main .center input[type=button],
+main .center input[type=submit],
+main .center input.button {
+  background: #191d31;
+  border: 2px solid #090b1d;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: #b6bbc9;
+  font-weight: 500;
+  font-size: 17px;
+  margin-bottom: 4px;
+  transition: 0.2s;
+  margin-bottom: 8px;
+  outline: none;
+}
+main .center button:hover,
+main .center input[type=button]:hover,
+main .center input[type=submit]:hover,
+main .center input.button:hover {
+  cursor: pointer;
+  background: #212945;
+  border-color: #5b48e9;
+}
+main .center button:active,
+main .center input[type=button]:active,
+main .center input[type=submit]:active,
+main .center input.button:active {
+  transition: 0s;
+  background: #5b48e9;
+  border-color: #5b48e9;
+  color: #efefef;
+}
+main .center button:focus,
+main .center input[type=button]:focus,
+main .center input[type=submit]:focus,
+main .center input.button:focus {
+  border-color: #5b48e9;
+}
+main .center input[type=file] {
+  border: 2px solid #F6F4E2;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 17px;
+  margin-bottom: 4px;
+  transition: 0.2s;
+  margin-bottom: 8px;
+  outline: none;
+  padding-left: -50px !important;
+  filter: invert(100%);
+  background: #F1EFEE;
+  color: #484335;
+}
+main .center input[type=file]:hover {
+  cursor: pointer;
+  border-color: #A3B715;
+  color: black;
+}
+main .center input[type=file]:active {
+  transition: 0s;
+  background: #A3B715;
+}
+main .center input[type=text],
+main .center input[type=number],
+main .center select {
+  appearance: none;
+  width: 250px;
+  margin-bottom: 8px;
+  background: #212945;
+  border: 2px solid #191d31;
+  border-radius: 8px;
+  padding: 8px 16px;
+  color: #b6bbc9;
+  font-size: 17px;
+  outline: none;
+}
+main .center input[type=text]:focus,
+main .center input[type=number]:focus,
+main .center select:focus {
+  border-color: #5b48e9;
+}
+main .center select {
+  background-image: url("data:image/svg+xml;utf8,<svg fill='lightgrey' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 5px;
+  width: 150px;
+  color: #9ea3bb;
+}
+main .center select:hover {
+  cursor: pointer;
+}
+main .center p {
+  margin-bottom: 8px;
+}
+main .center .group.add {
+  padding: 0;
+  background: #1c274f;
+  border-color: transparent;
+  transition: 0.2s;
+}
+main .center .group.add:hover {
+  cursor: pointer;
+  border-color: #5b48e9;
+}
+main .center .group.add:hover i {
+  transition: 0.2s;
+  color: #d2d5de;
+}
+main .center .group.add:active {
+  transition: 0s;
+  border-color: #5b48e9;
+  background: #5b48e9;
+}
+main .center .group.add:active i {
+  color: #efefef;
+}
+main .center .group.minimize {
+  padding: 5px;
+}
+main .center .group.minimize .top {
+  border-color: transparent;
+  margin-bottom: 0;
+}
+main .center .group.minimize .top .add {
+  margin: 4px;
+}
+main .center .group.minimize .tasks {
+  display: none;
+}
+main .center .group {
+  overflow: hidden;
+  background: #25315b;
+  border: 3px solid #1c274f;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+main .center .group i.add {
+  margin: 0 auto;
+  font-size: 36px;
+  color: #9ea3bb;
+}
+main .center .group .top {
+  text-align: left;
+  border-bottom: 2px solid #565c81;
+  padding-bottom: 8px;
+  margin-bottom: 4px;
+  padding-left: 4px;
+}
+main .center .group .top .icon {
+  font-size: 26px;
+  position: relative;
+  top: 7px;
+  color: #9ea3bb;
+}
+main .center .group .top .group-name {
+  font-size: 22px;
+  font-weight: 500;
+  margin-right: 8px;
+  color: #d2d5de;
+}
+main .center .group .top .info {
+  font-size: 16px;
+  color: #8a90aa;
+}
+@media (max-width: 800px) {
+  main .center .group .top .info {
+    display: none;
+  }
+}
+main .center .group .top .add {
+  float: right;
+  font-size: 28px;
+  color: #9ea3bb;
+  padding: 3px;
+  margin: -3px;
+  transition: 0.2s;
+  border-radius: 30px;
+}
+main .center .group .top .add:hover {
+  cursor: pointer;
+  color: #b6bbc9;
+  background: #fff1;
+}
+main .center .group .top .add:active {
+  transition: 0s;
+  background: #5b48e9;
+  color: #efefef;
+}
+main .center .group .tasks > div {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 8px 0;
+  transition: 1s;
+  user-select: none;
+}
+main .center .group .tasks > div > i {
+  font-size: 22px;
+  margin-right: 4px;
+  padding-left: 0;
+  color: #9ea3bb;
+}
+main .center .group .tasks > div > i:hover {
+  color: #b6bbc9;
+  background: #fff1;
+  cursor: pointer;
+  border-radius: 4px;
+}
+main .center .group .tasks > div > i:active {
+  background: #5b48e9;
+}
+main .center .group .tasks > div .task-name {
+  font-size: 20px;
+  color: #b6bbc9;
+  margin-right: 8px;
+}
+main .center .group .tasks > div .info {
+  color: #8a90aa;
+  font-size: 16px;
+}
+@media (max-width: 1000px) {
+  main .center .group .tasks > div .info {
+    display: none;
+  }
+}
+main .center .group .tasks > div .right {
+  position: absolute;
+  right: 0;
+}
+main .center .group .tasks > div .right i {
+  font-size: 24px;
+  color: #8a90aa;
+  border-radius: 4px;
+  transition: 0.2s;
+  margin: -2px;
+  padding: 2px;
+}
+main .center .group .tasks > div .right i:hover {
+  background: #fff1;
+  cursor: pointer;
+  color: #b6bbc9;
+}
+main .center .group .tasks > div .right i:active {
+  transition: 0s;
+  background: #5b48e9;
+  color: #efefef;
+}
+@media (max-width: 800px) {
+  main .center .group .tasks > div .right i {
+    display: none;
+  }
+}
+main .center .group .tasks > div .right i[selected=true] {
+  transition: 0s;
+  background: #5b48e9;
+  color: #efefef;
+}
+main .center .group .tasks > div:last-child {
+  margin-bottom: 0;
+}
+main .center .middle {
+  text-align: center;
+}
+main .center .start-here {
+  display: none;
+  color: #d44;
+  position: fixed;
+  top: 4px;
+  left: 287px;
+  font-size: 28px;
+  user-select: none;
+}
+main .center .start-here i {
+  font-size: 34px;
+  float: left;
+}
+main .center .start-here span {
+  font-weight: 500;
+}
+main .center .start-here.second {
+  position: static;
+}
+main .center .start-here.third {
+  position: relative;
+  float: right;
+  left: -10px;
+  top: -100px;
+}
+main .center .start-here.third i {
+  float: right;
+}
+main .center .start-here.fourth {
+  top: 60px;
+  left: 300px;
+}
+main .center .start-here.fifth {
+  top: 4px;
+  left: 35px;
+}
+main .center .color-outer {
+  display: flex;
+  margin-bottom: 20px;
+}
+main .center .color-outer .radio[name=color] {
+  display: inline !important;
+}
+main .center .color-outer .radio[name=color] span {
+  display: inline !important;
+  border-color: #1e2237 !important;
+}
+main .center .color-outer .radio[name=color] input {
+  display: inline !important;
+}
+main .center .radio {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 0;
+  cursor: pointer;
+  font-size: 18px;
+  user-select: none;
+}
+main .center .radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+main .center .radio .checkmark {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #212945;
+  border: 2px solid #191d31;
+  border-radius: 50%;
+  transition: 0.1s;
+}
+main .center .radio:hover .checkmark {
+  transition: 0s;
+  border-color: #5b48e9;
+}
+main .center .radio input:checked ~ .checkmark {
+  background-color: #212945;
+  border: 8px solid #5b48e9;
+}
+main .center .checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 0;
+  cursor: pointer;
+  font-size: 18px;
+  user-select: none;
+}
+main .center .checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+main .center .checkbox .checkmark {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #212945;
+  border: 2px solid #191d31;
+  border-radius: 4px;
+  transition: 0.1s;
+}
+main .center .checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+main .center .checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid #212945;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+main .center .checkbox:hover .checkmark {
+  transition: 0s;
+  border-color: #5b48e9;
+}
+main .center .checkbox input:checked ~ .checkmark {
+  background: #5b48e9;
+  border-color: #5b48e9;
+}
+
+.popup2 .box {
+  width: 500px !important;
+  max-width: 80% !important;
+}
+
+.popup, .popup2 {
+  z-index: 1010 !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #222b;
+  display: flex;
+  display: none;
+  align-items: center;
+}
+.popup .box, .popup2 .box {
+  width: 600px;
+  max-width: 100%;
+  max-height: 90vh;
+  background: #343c57;
+  border-radius: 16px;
+  border: 3px solid #191d31;
+  margin: 0 auto;
+  text-align: center;
+  overflow-y: auto;
+}
+.popup .box .center, .popup2 .box .center {
+  max-width: 100%;
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #b6bbc9;
+  text-align: left;
+}
+.popup .box .center h1, .popup2 .box .center h1 {
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  color: #d2d5de;
+  text-shadow: 0px 0px 4px #212945;
+}
+.popup .box .center h2, .popup2 .box .center h2 {
+  border-left: 3px solid #5b48e9;
+  padding-left: 8px;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #d2d5de;
+}
+.popup .box .center a, .popup2 .box .center a {
+  color: #9ea3bb;
+  text-decoration: underline;
+  margin-bottom: 8px;
+}
+.popup .box .center ul, .popup .box .center ol, .popup2 .box .center ul, .popup2 .box .center ol {
+  margin-left: 20px;
+}
+.popup .box .center .duedateselect, .popup2 .box .center .duedateselect {
+  display: none;
+}
+.popup .box .center button,
+.popup .box .center input[type=button],
+.popup .box .center input[type=submit],
+.popup .box .center input.button, .popup2 .box .center button,
+.popup2 .box .center input[type=button],
+.popup2 .box .center input[type=submit],
+.popup2 .box .center input.button {
+  background: #191d31;
+  border: 2px solid #090b1d;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: #b6bbc9;
+  font-weight: 500;
+  font-size: 17px;
+  margin-bottom: 4px;
+  transition: 0.2s;
+  margin-bottom: 8px;
+  outline: none;
+}
+.popup .box .center button:hover,
+.popup .box .center input[type=button]:hover,
+.popup .box .center input[type=submit]:hover,
+.popup .box .center input.button:hover, .popup2 .box .center button:hover,
+.popup2 .box .center input[type=button]:hover,
+.popup2 .box .center input[type=submit]:hover,
+.popup2 .box .center input.button:hover {
+  cursor: pointer;
+  background: #212945;
+  border-color: #5b48e9;
+}
+.popup .box .center button:active,
+.popup .box .center input[type=button]:active,
+.popup .box .center input[type=submit]:active,
+.popup .box .center input.button:active, .popup2 .box .center button:active,
+.popup2 .box .center input[type=button]:active,
+.popup2 .box .center input[type=submit]:active,
+.popup2 .box .center input.button:active {
+  transition: 0s;
+  background: #5b48e9;
+  border-color: #5b48e9;
+  color: #efefef;
+}
+.popup .box .center button:focus,
+.popup .box .center input[type=button]:focus,
+.popup .box .center input[type=submit]:focus,
+.popup .box .center input.button:focus, .popup2 .box .center button:focus,
+.popup2 .box .center input[type=button]:focus,
+.popup2 .box .center input[type=submit]:focus,
+.popup2 .box .center input.button:focus {
+  border-color: #5b48e9;
+}
+.popup .box .center input[type=file], .popup2 .box .center input[type=file] {
+  border: 2px solid #F6F4E2;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 17px;
+  margin-bottom: 4px;
+  transition: 0.2s;
+  margin-bottom: 8px;
+  outline: none;
+  padding-left: -50px !important;
+  filter: invert(100%);
+  background: #F1EFEE;
+  color: #484335;
+}
+.popup .box .center input[type=file]:hover, .popup2 .box .center input[type=file]:hover {
+  cursor: pointer;
+  border-color: #A3B715;
+  color: black;
+}
+.popup .box .center input[type=file]:active, .popup2 .box .center input[type=file]:active {
+  transition: 0s;
+  background: #A3B715;
+}
+.popup .box .center input[type=text],
+.popup .box .center input[type=number],
+.popup .box .center select, .popup2 .box .center input[type=text],
+.popup2 .box .center input[type=number],
+.popup2 .box .center select {
+  appearance: none;
+  width: 250px;
+  margin-bottom: 8px;
+  background: #212945;
+  border: 2px solid #191d31;
+  border-radius: 8px;
+  padding: 8px 16px;
+  color: #b6bbc9;
+  font-size: 17px;
+  outline: none;
+}
+.popup .box .center input[type=text]:focus,
+.popup .box .center input[type=number]:focus,
+.popup .box .center select:focus, .popup2 .box .center input[type=text]:focus,
+.popup2 .box .center input[type=number]:focus,
+.popup2 .box .center select:focus {
+  border-color: #5b48e9;
+}
+.popup .box .center select, .popup2 .box .center select {
+  background-image: url("data:image/svg+xml;utf8,<svg fill='lightgrey' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 5px;
+  width: 150px;
+  color: #9ea3bb;
+}
+.popup .box .center select:hover, .popup2 .box .center select:hover {
+  cursor: pointer;
+}
+.popup .box .center p, .popup2 .box .center p {
+  margin-bottom: 8px;
+}
+.popup .box .center .group.add, .popup2 .box .center .group.add {
+  padding: 0;
+  background: #1c274f;
+  border-color: transparent;
+  transition: 0.2s;
+}
+.popup .box .center .group.add:hover, .popup2 .box .center .group.add:hover {
+  cursor: pointer;
+  border-color: #5b48e9;
+}
+.popup .box .center .group.add:hover i, .popup2 .box .center .group.add:hover i {
+  transition: 0.2s;
+  color: #d2d5de;
+}
+.popup .box .center .group.add:active, .popup2 .box .center .group.add:active {
+  transition: 0s;
+  border-color: #5b48e9;
+  background: #5b48e9;
+}
+.popup .box .center .group.add:active i, .popup2 .box .center .group.add:active i {
+  color: #efefef;
+}
+.popup .box .center .group.minimize, .popup2 .box .center .group.minimize {
+  padding: 5px;
+}
+.popup .box .center .group.minimize .top, .popup2 .box .center .group.minimize .top {
+  border-color: transparent;
+  margin-bottom: 0;
+}
+.popup .box .center .group.minimize .top .add, .popup2 .box .center .group.minimize .top .add {
+  margin: 4px;
+}
+.popup .box .center .group.minimize .tasks, .popup2 .box .center .group.minimize .tasks {
+  display: none;
+}
+.popup .box .center .group, .popup2 .box .center .group {
+  overflow: hidden;
+  background: #25315b;
+  border: 3px solid #1c274f;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.popup .box .center .group i.add, .popup2 .box .center .group i.add {
+  margin: 0 auto;
+  font-size: 36px;
+  color: #9ea3bb;
+}
+.popup .box .center .group .top, .popup2 .box .center .group .top {
+  text-align: left;
+  border-bottom: 2px solid #565c81;
+  padding-bottom: 8px;
+  margin-bottom: 4px;
+  padding-left: 4px;
+}
+.popup .box .center .group .top .icon, .popup2 .box .center .group .top .icon {
+  font-size: 26px;
+  position: relative;
+  top: 7px;
+  color: #9ea3bb;
+}
+.popup .box .center .group .top .group-name, .popup2 .box .center .group .top .group-name {
+  font-size: 22px;
+  font-weight: 500;
+  margin-right: 8px;
+  color: #d2d5de;
+}
+.popup .box .center .group .top .info, .popup2 .box .center .group .top .info {
+  font-size: 16px;
+  color: #8a90aa;
+}
+@media (max-width: 800px) {
+  .popup .box .center .group .top .info, .popup2 .box .center .group .top .info {
+    display: none;
+  }
+}
+.popup .box .center .group .top .add, .popup2 .box .center .group .top .add {
+  float: right;
+  font-size: 28px;
+  color: #9ea3bb;
+  padding: 3px;
+  margin: -3px;
+  transition: 0.2s;
+  border-radius: 30px;
+}
+.popup .box .center .group .top .add:hover, .popup2 .box .center .group .top .add:hover {
+  cursor: pointer;
+  color: #b6bbc9;
+  background: #fff1;
+}
+.popup .box .center .group .top .add:active, .popup2 .box .center .group .top .add:active {
+  transition: 0s;
+  background: #5b48e9;
+  color: #efefef;
+}
+.popup .box .center .group .tasks > div, .popup2 .box .center .group .tasks > div {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 8px 0;
+  transition: 1s;
+  user-select: none;
+}
+.popup .box .center .group .tasks > div > i, .popup2 .box .center .group .tasks > div > i {
+  font-size: 22px;
+  margin-right: 4px;
+  padding-left: 0;
+  color: #9ea3bb;
+}
+.popup .box .center .group .tasks > div > i:hover, .popup2 .box .center .group .tasks > div > i:hover {
+  color: #b6bbc9;
+  background: #fff1;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.popup .box .center .group .tasks > div > i:active, .popup2 .box .center .group .tasks > div > i:active {
+  background: #5b48e9;
+}
+.popup .box .center .group .tasks > div .task-name, .popup2 .box .center .group .tasks > div .task-name {
+  font-size: 20px;
+  color: #b6bbc9;
+  margin-right: 8px;
+}
+.popup .box .center .group .tasks > div .info, .popup2 .box .center .group .tasks > div .info {
+  color: #8a90aa;
+  font-size: 16px;
+}
+@media (max-width: 1000px) {
+  .popup .box .center .group .tasks > div .info, .popup2 .box .center .group .tasks > div .info {
+    display: none;
+  }
+}
+.popup .box .center .group .tasks > div .right, .popup2 .box .center .group .tasks > div .right {
+  position: absolute;
+  right: 0;
+}
+.popup .box .center .group .tasks > div .right i, .popup2 .box .center .group .tasks > div .right i {
+  font-size: 24px;
+  color: #8a90aa;
+  border-radius: 4px;
+  transition: 0.2s;
+  margin: -2px;
+  padding: 2px;
+}
+.popup .box .center .group .tasks > div .right i:hover, .popup2 .box .center .group .tasks > div .right i:hover {
+  background: #fff1;
+  cursor: pointer;
+  color: #b6bbc9;
+}
+.popup .box .center .group .tasks > div .right i:active, .popup2 .box .center .group .tasks > div .right i:active {
+  transition: 0s;
+  background: #5b48e9;
+  color: #efefef;
+}
+@media (max-width: 800px) {
+  .popup .box .center .group .tasks > div .right i, .popup2 .box .center .group .tasks > div .right i {
+    display: none;
+  }
+}
+.popup .box .center .group .tasks > div .right i[selected=true], .popup2 .box .center .group .tasks > div .right i[selected=true] {
+  transition: 0s;
+  background: #5b48e9;
+  color: #efefef;
+}
+.popup .box .center .group .tasks > div:last-child, .popup2 .box .center .group .tasks > div:last-child {
+  margin-bottom: 0;
+}
+.popup .box .center .middle, .popup2 .box .center .middle {
+  text-align: center;
+}
+.popup .box .center .start-here, .popup2 .box .center .start-here {
+  display: none;
+  color: #d44;
+  position: fixed;
+  top: 4px;
+  left: 287px;
+  font-size: 28px;
+  user-select: none;
+}
+.popup .box .center .start-here i, .popup2 .box .center .start-here i {
+  font-size: 34px;
+  float: left;
+}
+.popup .box .center .start-here span, .popup2 .box .center .start-here span {
+  font-weight: 500;
+}
+.popup .box .center .start-here.second, .popup2 .box .center .start-here.second {
+  position: static;
+}
+.popup .box .center .start-here.third, .popup2 .box .center .start-here.third {
+  position: relative;
+  float: right;
+  left: -10px;
+  top: -100px;
+}
+.popup .box .center .start-here.third i, .popup2 .box .center .start-here.third i {
+  float: right;
+}
+.popup .box .center .start-here.fourth, .popup2 .box .center .start-here.fourth {
+  top: 60px;
+  left: 300px;
+}
+.popup .box .center .start-here.fifth, .popup2 .box .center .start-here.fifth {
+  top: 4px;
+  left: 35px;
+}
+.popup .box .center .color-outer, .popup2 .box .center .color-outer {
+  display: flex;
+  margin-bottom: 20px;
+}
+.popup .box .center .color-outer .radio[name=color], .popup2 .box .center .color-outer .radio[name=color] {
+  display: inline !important;
+}
+.popup .box .center .color-outer .radio[name=color] span, .popup2 .box .center .color-outer .radio[name=color] span {
+  display: inline !important;
+  border-color: #1e2237 !important;
+}
+.popup .box .center .color-outer .radio[name=color] input, .popup2 .box .center .color-outer .radio[name=color] input {
+  display: inline !important;
+}
+.popup .box .center .radio, .popup2 .box .center .radio {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 0;
+  cursor: pointer;
+  font-size: 18px;
+  user-select: none;
+}
+.popup .box .center .radio input, .popup2 .box .center .radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.popup .box .center .radio .checkmark, .popup2 .box .center .radio .checkmark {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #212945;
+  border: 2px solid #191d31;
+  border-radius: 50%;
+  transition: 0.1s;
+}
+.popup .box .center .radio:hover .checkmark, .popup2 .box .center .radio:hover .checkmark {
+  transition: 0s;
+  border-color: #5b48e9;
+}
+.popup .box .center .radio input:checked ~ .checkmark, .popup2 .box .center .radio input:checked ~ .checkmark {
+  background-color: #212945;
+  border: 8px solid #5b48e9;
+}
+.popup .box .center .checkbox, .popup2 .box .center .checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 0;
+  cursor: pointer;
+  font-size: 18px;
+  user-select: none;
+}
+.popup .box .center .checkbox input, .popup2 .box .center .checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.popup .box .center .checkbox .checkmark, .popup2 .box .center .checkbox .checkmark {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #212945;
+  border: 2px solid #191d31;
+  border-radius: 4px;
+  transition: 0.1s;
+}
+.popup .box .center .checkbox input:checked ~ .checkmark:after, .popup2 .box .center .checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+.popup .box .center .checkbox .checkmark:after, .popup2 .box .center .checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid #212945;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.popup .box .center .checkbox:hover .checkmark, .popup2 .box .center .checkbox:hover .checkmark {
+  transition: 0s;
+  border-color: #5b48e9;
+}
+.popup .box .center .checkbox input:checked ~ .checkmark, .popup2 .box .center .checkbox input:checked ~ .checkmark {
+  background: #5b48e9;
+  border-color: #5b48e9;
+}
+.popup .box .center #formIconSample, .popup2 .box .center #formIconSample {
+  background: #212945;
+  border: 2px solid #191d31;
+  font-size: 28px;
+  border-radius: 4px;
+  padding: 2px;
+  width: 36px;
+  height: 36px;
+  overflow: hidden;
+  position: relative;
+  top: 12px;
+  margin-left: 10px;
+  transition: 0.2s;
+}
+.popup .box .center #formIconSample:hover, .popup2 .box .center #formIconSample:hover {
+  border-color: #5b48e9;
+  color: #d2d5de;
+  cursor: pointer;
+}
+.popup .box .center #formIconSample:active, .popup2 .box .center #formIconSample:active {
+  transition: 0s;
+  background: #5b48e9;
+  border-color: #5b48e9;
+  color: #efefef;
+}
+.popup .box .center .iconlist, .popup2 .box .center .iconlist {
+  display: flex;
+  flex-wrap: wrap;
+}
+.popup .box .center .iconlist i, .popup2 .box .center .iconlist i {
+  margin: 2px;
+  padding: 6px;
+  font-size: 30px;
+  color: #9ea3bb;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+.popup .box .center .iconlist i:hover, .popup2 .box .center .iconlist i:hover {
+  background: #fff1;
+  cursor: pointer;
+  color: #d2d5de;
+}
+.popup .box .center .iconlist i:active, .popup2 .box .center .iconlist i:active {
+  transition: 0s;
+  color: #efefef;
+  background: #5b48e9;
+}
+
+.mobile-menu {
+  z-index: 1000;
+  display: none;
+  position: fixed;
+  left: 8px;
+  bottom: 8px;
+  background: #191d31;
+  color: #9ea3bb;
+  border-radius: 999px;
+  border: 2px solid #090b1d;
+}
+.mobile-menu i {
+  font-size: 50px;
+  padding: 14px;
+}
+
+/*# sourceMappingURL=main.css.map */

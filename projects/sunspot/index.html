@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Sunspot Digital</title>
+
+  <meta charset="utf-8">
+  <meta name="description" content="We’re a small team of marketing and technology experts. Over the past decade, these two critical areas of business have become integrative and mutually beneficial">
+  <!-- <meta name="keywords" content=""> -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9, user-scalable=no">
+  <link rel="icon"
+      type="image/png"
+      href="img/favicon.png">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="title pr3">
+    <div class="outer">
+      <center>
+        <img src="img/sunspot-logo-title.svg" alt="Sunspot Logo">
+        <section class="right">
+          <h1>Sunspot</h1>
+          <span>Digital</span>
+        </section>
+      </center>
+    </div>
+  </div>
+
+  <div class="down-arrow pr4">
+    <center>
+      <img class="down-arrow-image" src="img/down-arrow.svg" alt="Down Arrow">
+    </center>
+  </div>
+
+  <div class="fg-wave wwa" id="down">
+    <div class="before">
+      <center>
+        <h2>Who We Are</h2>
+        <div></div>
+        <div class="left">
+          <p>We’re a small team of marketing and technology experts. Over the past decade, these two critical areas of business have become integrative and mutually beneficial. They are often more than the sum of theirparts when it comes to going
+            above and beyond for your customers and delighting your company stakeholders.</p>
+        </div>
+        <div class="right">
+          <img src="img/marketing.svg" class="prp6" alt="Marketing Image">
+        </div>
+        <div class="clear"></div>
+      </center>
+    </div>
+    <div class="after">
+    </div>
+  </div>
+
+  <div class="bg-wave pr4">
+    <center>
+      <h2>What We Do</h2>
+      <div></div>
+      <div class="left">
+        <img src="img/websites.svg" class="prp4" alt="Websites Image"/>
+      </div>
+      <div class="right">
+        <p>Much of our time is spent collaborating with our clients. Together we conceptualize and carry out activities that benefit their businesses, their customers and their bottom line growth. Any given day, you'll find us diving deep into:</p>
+        <ul>
+          <li>Marketing strategy & budget allocation</li>
+          <li>Digital advertising and social media strategy</li>
+          <li>ROI-based digital marketing and social media</li>
+          <li>Web design from the ground up</li>
+          <li>Content strategy</li>
+          <li>CRM and other business-critical corporate technologies</li>
+        </ul>
+      </div>
+    </center>
+  </div>
+
+  <div class="fg-wave cut" id="down">
+    <div class="before">
+      <center>
+        <h2>Contact Us Today</h2>
+        <div></div>
+        <div class="left">
+          <p>All of our client relationships begin with meeting in person, getting to know you and learning about the strengths of your company and the needs of your customers. This is where everything starts. Get in touch with us today. We’d love to
+            hear from you and start a conversation. </p>
+            <button class="button1" onclick="openPopup()">Contact</button>
+        </div>
+        <div class="right">
+          <img src="img/contact.svg" class="prp6" alt="Contact Image">
+        </div>
+        <div class="clear"></div>
+      </center>
+    </div>
+    <div class="after">
+    </div>
+  </div>
+
+
+
+  <div class="bg-wave pr4 projects">
+    <center>
+      <h2>Projects</h2>
+      <div></div>
+      <div class="left">
+        <div class="projects">
+          <section class="" onclick="switchProject('https://youtube.com/embed/Co9aNGIdXRI?controls=0&showinfo=0&rel=0&autoplay=1')">
+            <img src="img/iframe-2creeks.png" alt="2creeks image">
+          </section>
+          <section class="" onclick="switchProject('https://cedarsconstructionllc.com/')">
+            <img src="img/iframe-cedars.png" alt="Cedars image">
+          </section>
+          <section class="" onclick="switchProject('https://youtube.com/embed/QPcnDIJ7PrU?controls=0&showinfo=0&rel=0&autoplay=1')">
+            <img src="img/iframe-rimriser.png" alt="RimRiser image">
+          </section>
+          <section class="" onclick="switchProject('https://romanocapital.com/')">
+            <img src="img/iframe-romano.png" alt="RomanoCapital image">
+          </section>
+          <section class="" onclick="switchProject('https://globalenergyclearing.com/')">
+            <img src="img/iframe-gec.png" alt="globalenergyclearing image">
+          </section>
+          <section class="" onclick="switchProject('https://granitehl.com/')">
+            <img src="img/iframe-granitehl.png" alt="Granitehomeloans image">
+          </section>
+        </div>
+      </div>
+      <div class="right">
+          <div class="iframe-outer">
+            <iframe id="iframe"></iframe>
+            <a id="iframe-link" href="" target="_blank"><img src="img/open-link.svg"></a>
+
+          </div>
+          <div class="stand"></div>
+      </div>
+    </center>
+  </div>
+
+
+
+
+
+  <div class="popup" onclick="popupClick(event)">
+    <center>
+      <h2>Contact Us</h2>
+      <form id="contact-form" action="https://formspree.io/mdowjeyq" method="post">
+        <span>Name</span>
+        <input type="text" name="name" autocomplete="none">
+        <span>Email</span>
+        <input onkeydown="this.classList = 'email'" class="email" type="text" name="_replyto" autocomplete="none">
+        <span>Message</span>
+        <textarea  name="message" autocomplete="none"></textarea>
+        <button class="button2 submit" type="submit">Send</button>
+      </form>
+      <div class="close" onclick="closePopup()">x</div>
+    </center>
+  </div>
+
+  <div class="message"></div>
+
+  <footer>
+    <div class="left">
+      <img src="img/sunspot-white.svg" alt="Sunspot Logo White"/>
+      <span class="sunspot">Sunspot</span>
+      <span class="digital">Digital</span>
+      <span class="copyright">&copy; Sunspot Digital 2020</span>
+    </div>
+    <div class="right">
+
+      <a onclick="openPopup()">Contact</a>
+    </div>
+
+    <div class="clear"></div>
+  </footer>
+
+
+
+
+
+  <script src="js/fun.js"></script>
+  <script src="js/prespective.js"></script>
+  <script src="js/popup.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

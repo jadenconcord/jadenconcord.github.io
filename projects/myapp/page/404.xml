@@ -1,0 +1,3 @@
+<h1>Page not found {errorStatus}</h1>
+<p>{errorMessage}</p>
+<a onclick="page('page/home.xml')">Back to Home</a>

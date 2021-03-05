@@ -1,0 +1,6 @@
+<h1>Extentions</h1><hr><br><br>
+<!-- <center><input type="text" placeholder="search"></center><br><br> -->
+<h2 class="h-border">Active</h2>
+<div class="box1-outer">{genInstalledExtentions() || 'You have no active extensions'}</div>
+<br><br><h2 class="h-border">All</h2>
+<div class="box1-outer">{genExtentions() || 'No extentions to install'}</div>

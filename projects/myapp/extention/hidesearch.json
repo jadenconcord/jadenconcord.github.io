@@ -1,0 +1,5 @@
+{
+  "onInstall": "$('header .left input').style.display = 'none'",
+  "onRemove": "$('header .left input').style.display = ''",
+  "onStart": "$('header .left input').style.display = 'none'"
+}

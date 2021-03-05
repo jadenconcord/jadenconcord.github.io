@@ -1,0 +1,201 @@
+// Theme
+
+// Options (you can change these)
+
+$theme: #d0cd77;
+$theme-secondary: #4893d9;
+$black-darker: #15151e;
+$black-lighter: #2d2c3d;
+$white-lighter: #e5d9c5;
+$white-darker: #c6bda7;
+$border-width: 2px;
+$border-radius1: 4px;
+$border-radius2: 8px;
+$transition-time: 0.2s;
+
+// Variables (try not to use fixed values here)
+
+$theme-dark: saturate(darken($theme, 5%), 5%);
+$theme-bright: desaturate(lighten($theme, 5%), 5%);
+
+$theme2: $theme-secondary;
+$theme2-dark: saturate(darken($theme2, 5%), 5%);
+$theme2-bright: desaturate(lighten($theme2, 5%), 5%);
+
+$theme-red: adjust-hue($theme, - hue($theme) );
+$theme-yellow: adjust-hue($theme, - hue($theme) + 60deg);
+$theme-green: adjust-hue($theme, - hue($theme) + 120deg);
+$theme-blue: adjust-hue($theme, - hue($theme) + 240deg);
+
+$black1: $black-darker;
+$black4: $black-lighter;
+$black2: mix($black1, $black4, 75%);
+$black3: mix($black1, $black4, 25%);
+$black0: saturate(darken($black1, 5%), 5%);
+$black5: mix($black1, $white-lighter, 80%);
+
+$white1: $white-lighter;
+$white4: $white-darker;
+$white2: mix($white1, $white4, 75%);
+$white3: mix($white1, $white4, 25%);
+$white0: desaturate(lighten($white1, 5%), 5%);
+
+$border-radius0: $border_radius1 / 2;
+$border-radius3: $border_radius2 * 2;
+
+
+
+
+
+
+
+
+
+$content-width: 1010px;
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body{
+  background: $black4;
+}
+
+div.clear{
+  clear: both;
+}
+
+::selection{
+  background: $theme2-dark;
+  color: $theme-bright;
+}
+
+header{
+  background: $black0;
+  user-select: none;
+  .center{
+    text-align: left;
+    max-width: $content-width;
+    margin: 0 auto;
+    color: $white1;
+    padding: 14px;
+    .left{
+      float: left;
+      display: flex;
+      align-items: center;
+      .logo{
+        background: $theme;
+        color: $black0;
+        padding: 2px;
+        padding-left: 16px;
+        margin-right: 8px;
+        font-weight: bold;
+        font-family: sans-serif;
+        border-radius: $border-radius0;
+        font-size: 20px;
+      }
+      .logo-title{
+        color: $theme;
+        font-weight: bold;
+        margin-right: 36px;
+        font-size: 18px;
+      }
+      nav{
+        a{
+          text-decoration: none;
+          color: $white1;
+          margin-right: 8px;
+          &:hover{
+            color: $white3;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .right{
+      float: right;
+    }
+  }
+}
+
+main{
+  .title{
+    background: $black2;
+    color: $white1;
+    .center{
+      max-width: $content-width;
+      margin: 0 auto;
+      padding: 16px 16px;
+      text-align: center;
+
+      h1{
+        font-size: 60px;
+        font-weight: normal;
+        color: $theme;
+        margin-bottom: 20px;
+        margin-top: 45px;
+      }
+      p{
+        font-size: 24px;
+        max-width: 600px;
+        margin: 0 auto;
+        margin-bottom: 28px;
+      }
+      code{
+        display: block;
+        background: $black0;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 30px;
+        border-radius: $border-radius2;
+        text-align: left;
+        margin-bottom: 28px;
+        font-family: monospace;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        border: $border-width solid black;
+      }
+      button{
+        background: $theme2;
+        border: 2px solid $theme2-dark;
+        padding: 8px 16px;
+        color: $white0;
+        border-radius: $border-radius1;
+        font-size: 22px;
+        transition: $transition-time;
+        margin-bottom: 16px;
+        &:hover{
+          background: $theme2-dark;
+          cursor: pointer;
+        }
+        &:active{
+          transition: 0s;
+          background: $theme2-bright;
+          border-color: $theme2-bright;
+        }
+      }
+    }
+  }
+  .content{
+    .center{
+      max-width: $content-width;
+      margin: 0 auto;
+      padding: 16px 16px;
+      color: $white1;
+      h2{
+        font-size: 36px;
+        margin-top: 40px;
+        font-weight: normal;
+        margin-bottom: 8px;
+      }
+      p{
+        font-size: 18px;
+        line-height: 30px;
+      }
+    }
+  }
+}

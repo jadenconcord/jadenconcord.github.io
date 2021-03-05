@@ -1,0 +1,6 @@
+{
+  "onInstall": "$('aside').style.width = '64px'; $('aside').style.overflow = 'hidden'; $$('aside section span').css('display', 'none'); $('main').style.width = '100%';$('main').style.left = '0'",
+  "onRemove": "window.location.reload();",
+  "onStart": "$('aside').style.width = '64px'; $('aside').style.overflow = 'hidden'; $$('aside section span').css('display', 'none'); $('main').style.width = '100%';$('main').style.left = '0'",
+  "onPageLoad": "$$('aside section span').css('display', 'none')"
+}

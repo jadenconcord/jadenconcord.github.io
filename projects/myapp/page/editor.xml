@@ -1,0 +1,40 @@
+<h1>Editor</h1>
+
+<hr><br><br>
+
+<div class="textedit">
+
+  <div class="toolbar">
+    <i onclick="format('bold')" title="bold">format_bold</i>
+    <i onclick="format('italic')" title="italic">format_italic</i>
+    <i onclick="format('underline')" title="italic">format_underlined</i>
+    <i onclick="format('strikeThrough')" title="cross out">format_strikethrough</i>
+    <i onclick="format('removeFormat')" title="remove formating">format_clear</i>
+    <i onclick="format('increaseFontSize')" title="increase font size">add</i>
+    <i onclick="format('decreaseFontSize')" title="decrease font size">remove</i>
+    <i onclick="format('insertunorderedlist')" title="list">format_list_bulleted</i>
+    <i onclick="format('insertOrderedlist')" title="numbered list">format_list_numbered</i>
+    <i onclick="format('insertHTML', window.prompt('paste HTML code'))" title="insert HTML">code</i>
+    <i onclick="format('createLink', window.prompt('link url'))" title="link">link</i>
+    <i onclick="format('insertImage', window.prompt('image url'))" title="image">image</i>
+    <i onclick="format('justifyLeft')" title="align left">format_align_left</i>
+    <i onclick="format('justifyCenter')" title="align center">format_align_center</i>
+    <i onclick="format('justifyRight')" title="align right">format_align_right</i>
+    <i onclick="format('justifyFull')" title="align block">format_align_justify</i>
+    <i onclick="format('hiliteColor', 'yellow');format('foreColor', 'black')" title="highlight">palette</i>
+    <i onclick="format('foreColor', 'red')" title="text color">palette</i>
+
+
+    <div class="right">
+      <i onclick="format('undo')" title="undo">undo</i>
+      <i onclick="format('redo')" title="redo">redo</i>
+    </div>
+
+
+  </div>
+
+</div>
+
+<div class="textinput submitthishtml" name="text" onkeydown="textEditKey(event)" class="input" contenteditable>
+Hello
+</div>

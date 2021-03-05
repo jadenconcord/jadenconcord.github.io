@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Projects Homepage</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="center">
+      <div class="left">
+        <a href="." tabindex="-1"><i>dashboard</i>
+          <span>Projects Homepage</span></a>
+      </div>
+      <nav class="right">
+        <i tabindex="0" onclick="projectPopup.show()" onkeypress="onEnter(projectPopup.show)">add</i>
+        <i tabindex="0" onclick="settingsPopup()" onkeypress="onEnter(settingsPopup)">settings</i>
+      </nav>
+      <div class="clear"></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="title">
+      <!-- <h1>Projects Homepage</h1> -->
+      <div class="center">
+        <input type="text" name="search" onkeyup="setSearch()" placeholder="Search Projects" autocomplete="off" autofocus>
+      </div>
+    </section>
+    <section><br>
+      <details>
+        <summary onclick="this.blur()"><i>star</i><span>Starred</span></summary>
+        <div id="starred" class="projects-container">
+          <template></template>
+        </div>
+      </details>
+    </section>
+
+    <section id="projects" class="projects-container">
+      <template id="projects-template">
+        {each projects project i}
+        <div class="project {i%5==0 ? 'full' : ''} {project.class || ''}" tabindex="0" onkeypress="onEnter(redirect, '{project.dir}')" title="{project.name}">
+          <a href="{project.url || project.dir}" tabindex="-1">
+            <div class="title" style="background: linear-gradient(to right, {project.grad + ''})">
+              <i><img src="{project.fav || project.dir+'/favicon.png'}" alt="{project.icon || ''}" onerror="this.src='{project.dir}/img/favicon.png';this.onerror=null"></i>
+            </div>
+            <footer>
+              <h3>{project.name}</h3>
+            </footer>
+          </a>
+          <nav>
+            <i onclick="removeProjectPopup.show({{dir:'{project.dir}'}})">delete</i>
+            <i onclick="privateProject(this, '{project.dir}')">{project.private ? 'lock' : 'public'}</i>
+            <i onclick="promptEditProject('{project.dir}')">create</i>
+            <i class="{project.star ? 'star' : ''}" onclick="starProject(this, '{project.dir}')">{project.star ? 'star' : 'star_outline'}</i>
+            <i onclick="developProject('{project.dir}')">code</i>
+          </nav>
+        </div>
+        {/each}
+      </template>
+    </section>
+  </main>
+
+  <div class="message">This is a message</div>
+
+  <!-- Templates -->
+
+  <template id="addProject">
+    <h2>{name ? 'Edit Project' : 'Create Project'}</h2>
+    {input name="name" label="Project Name" placeholder="My Project" value="[name]" required/}
+    {select name="type" value="[type]" label="Project Type" options="!web:Website or App,other:Other"/}
+    {if name == ''}
+      {input name="dir" value="[dir]" label="Project Directory" placeholder="my-project" required/}
+      {select name="template" label="Project Template" options="!none:None,icecream:IceCream template,basicwebsite:Plain website template"/}
+      {switch name="private" label="Private Project"/}
+    {/if}
+    <br><br>
+    <button onclick="promptIcon()">Select Icon</button>
+    <i>{input name="icon" value="[icon]" placeholder="dashboard" class="inputIcon"/}</i>
+    {color name="color1" value="[color1]" label="Color 1"/}
+    {color name="color2" value="[color1]" label="Color 2"/}
+    <br><br>
+    {if name == ''}
+    <div class="center">
+      {button class="b2" onclick="createProject('create')"}Create{/button}&nbsp;&nbsp;
+      {button onclick="createProject('add')"}Add{/button}&nbsp;&nbsp;
+      {button onclick="createProject('draft')"}Draft{/button}
+    </div>
+    {/if}
+    {if name}
+      <div class="center">
+        {button onclick="editProject('[dir]')" class="b2"}Save{/button}
+      </div>
+    {/if}
+  </template>
+
+  <template id="removeProject">
+    <h3>Delete project {dir}?</h3><br><br>
+      <div class="box center">
+      <button class="b2" onclick="removeProject('{dir}', 'remove')">Remove</button>
+      &nbsp;&nbsp;&nbsp;<button onclick="removeProject('{dir}', 'hide')">Hide Project</button>
+      &nbsp;&nbsp;&nbsp;<button onclick="removeProjectPopup.hide()">Cancel</button>
+      </div>
+  </template>
+
+  <script src="js/themewidget.js" charset="utf-8"></script>
+  <script src="js/icons.js" charset="utf-8"></script>
+  <script src="js/ice.js" charset="utf-8"></script>
+  <script src="https://jadenconcord.github.io/a/shortcutjs/0-9/shortcut.js" charset="utf-8"></script>
+  <script src="js/main.js" charset="utf-8"></script>
+  <!-- <script src="js/themewidget.js" charset="utf-8"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+{
+  "onInstall": "popup.show([{type:'h3', value: 'Avitar options <a href=\"https://material.io/icons\" target=\"_blank\">(find icons)</a>'}, {type: 'text', name: 'icon', label: 'icon', placeholder: 'account_circle'}, {type: 'color', name: 'color', label: 'color', value: '#308080'}, {type: 'submit2', value: 'set'}], (result) => {setExtentionValue('icon', result.icon);setExtentionValue('color', result.color);backup();window.location.reload()})",
+  "onRemove": "window.location.reload();",
+  "onStart": "$('i.account').style.color = getExtentionValue('color');$('i.account').textContent = getExtentionValue('icon');",
+  "icon": "sentiment_satisfied_alt",
+  "color": "#fffd"
+}

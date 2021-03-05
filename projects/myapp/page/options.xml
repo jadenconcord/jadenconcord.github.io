@@ -1,0 +1,3 @@
+<h1>Options</h1><hr><br>
+<button class="b1" onclick="page('page/extentions.xml')">Extentions</button>
+<button class="b1" onclick="page('page/themes.xml')">Themes</button>

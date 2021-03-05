@@ -1,0 +1,4 @@
+{
+  "onInstall": "setTimeout(()=>{page('page/extention/devmode.xml')}, 1000)",
+  "onRemove": "closeItem('page/extention/devmode.xml')"
+}

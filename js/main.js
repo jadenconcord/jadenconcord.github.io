@@ -1,7 +1,13 @@
 let repos = [];
 let articles = [];
+let projects = [];
 
 (async () => {
+
+  const projectsRes = await fetch('projects.json');
+  let projectsParse = await projectsRes.text();
+  projects = JSON.parse(projectsParse).projects.reverse();
+
   const reposRes = await fetch('https://api.github.com/users/jadenconcord/repos');
   repos = await reposRes.json();
 

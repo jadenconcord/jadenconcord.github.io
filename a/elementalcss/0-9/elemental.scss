@@ -331,7 +331,7 @@ select,
  {
   @include input;
   max-width: 100%;
-  background: $bg2;
+  background-color: $bg2;
   border: $border-width solid $bg1;
   color: $fg3;
   border-radius: $radius1;
@@ -470,16 +470,16 @@ input[type="color"] {
   background: $bg2;
   border: none;
   padding: 0;
-  height: 3rem;
-  width: 3rem;
+  height: 4rem;
+  width: 5rem;
   color: $fg3;
   position: relative;
-  top: -0.125rem;
-  right: 0;
-  clip-path: circle(33.73% at 60% 50%);
+  top: -.5rem;
+  right: -.8rem;
+  clip-path: circle(22.23% at 56.25% 47.19%);
   transition: $transition-time;
 
-  &:hover {
+  &:hover, &:focus {
     filter: invert(20%);
     cursor: pointer;
   }
@@ -510,6 +510,7 @@ textarea {
 }
 
 select {
+  background-color: $bg2;
   background-image: url("data:image/svg+xml;utf8,<svg fill='lightgrey' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
   background-repeat: no-repeat;
   appearance: none;

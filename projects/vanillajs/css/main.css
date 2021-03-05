@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif; }
+
+body {
+  background: #2d2c3d; }
+
+div.clear {
+  clear: both; }
+
+::selection {
+  background: #2d87db;
+  color: #d3d08e; }
+
+header {
+  background: #0a0a10;
+  user-select: none; }
+  header .center {
+    text-align: left;
+    max-width: 1010px;
+    margin: 0 auto;
+    color: #e5d9c5;
+    padding: 14px; }
+    header .center .left {
+      float: left;
+      display: flex;
+      align-items: center; }
+      header .center .left .logo {
+        background: #d0cd77;
+        color: #0a0a10;
+        padding: 2px;
+        padding-left: 16px;
+        margin-right: 8px;
+        font-weight: bold;
+        font-family: sans-serif;
+        border-radius: 2px;
+        font-size: 20px; }
+      header .center .left .logo-title {
+        color: #d0cd77;
+        font-weight: bold;
+        margin-right: 36px;
+        font-size: 18px; }
+      header .center .left nav a {
+        text-decoration: none;
+        color: #e5d9c5;
+        margin-right: 8px; }
+        header .center .left nav a:hover {
+          color: #cec4af;
+          text-decoration: underline; }
+    header .center .right {
+      float: right; }
+
+main .title {
+  background: #1b1b26;
+  color: #e5d9c5; }
+  main .title .center {
+    max-width: 1010px;
+    margin: 0 auto;
+    padding: 16px 16px;
+    text-align: center; }
+    main .title .center h1 {
+      font-size: 60px;
+      font-weight: normal;
+      color: #d0cd77;
+      margin-bottom: 20px;
+      margin-top: 45px; }
+    main .title .center p {
+      font-size: 24px;
+      max-width: 600px;
+      margin: 0 auto;
+      margin-bottom: 28px; }
+    main .title .center code {
+      display: block;
+      background: #0a0a10;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 30px;
+      border-radius: 8px;
+      text-align: left;
+      margin-bottom: 28px;
+      font-family: monospace;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      border: 2px solid black; }
+    main .title .center button {
+      background: #4893d9;
+      border: 2px solid #2d87db;
+      padding: 8px 16px;
+      color: #ebe4d8;
+      border-radius: 4px;
+      font-size: 22px;
+      transition: 0.2s;
+      margin-bottom: 16px; }
+      main .title .center button:hover {
+        background: #2d87db;
+        cursor: pointer; }
+      main .title .center button:active {
+        transition: 0s;
+        background: #629fd8;
+        border-color: #629fd8; }
+main .content .center {
+  max-width: 1010px;
+  margin: 0 auto;
+  padding: 16px 16px;
+  color: #e5d9c5; }
+  main .content .center h2 {
+    font-size: 36px;
+    margin-top: 40px;
+    font-weight: normal;
+    margin-bottom: 8px; }
+  main .content .center p {
+    font-size: 18px;
+    line-height: 30px; }
+
+/*# sourceMappingURL=main.css.map */

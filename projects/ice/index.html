@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>ICE JS</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <main>
+    <template>
+      <form>
+        <label for="choose">Would you prefer a banana or a cherry?</label>
+        <input id="choose" name="i_like" required pattern="[Bb]anana|[Cc]herry">
+        <button>Submit</button>
+      </form>
+      <form>
+        <h1>ICE JS</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        <center>
+          <h3>Search Name</h3>
+          {input name="name" placeholder="John Doe" pattern="\w+( +\w+)*"/}
+          <button type="button" name="button" onclick="promptName()" class="b2">Search</button>
+        </center>
+        <br>
+        <h2>Filters</h2>
+        {select name="filters" options="!none:None,a:a,b:b,c:c"/}
+        <button>Submit</button>
+        <hr>
+        {skip}
+        This is {}}{}{ di
+        {/skip}
+        {test}
+        {skip}
+        {}sa}bled {}{asdf}}
+        {eval}
+        Hello
+        {/eval}
+        {/skip}
+        {checkbox name="test" label="Do you now want to flip this?" toggle="togglethis" checked/}
+        <details id="togglethis">
+          <summary>Open this or not?</summary>
+          <h2>hello</h2>
+        </details>
+      </form>
+    </template>
+  </main>
+
+  <template id="wow">
+    This is some template data
+    <button>Click {this}</button>
+  </template>
+
+  <script src="js/ice.js" charset="utf-8"></script>
+  <script src="js/main.js" charset="utf-8"></script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- Version Test 1.1 -->
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Todoka - Task Manager</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="img/favicon.png"  type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <aside>
+      <header>
+        <div class="left"><i onclick="openOptions()">settings</i></div>
+        <div class="right"><i onclick="addContainer()">add</i></div>
+        <div class="clear"></div>
+      </header>
+      <div class="list"></div>
+    </aside>
+
+    <main>
+      <div class="center"></div>
+    </main>
+
+    <div class="popup" onclick="closePopup(event)">
+      <div class="box">
+        <div class="center"></div>
+      </div>
+    </div>
+
+    <div class="popup2" onclick="closePopup(event)">
+      <div class="box">
+        <div class="center"></div>
+      </div>
+    </div>
+
+    <div class="mobile-menu" onclick="openSidebar()">
+      <i>menu</i>
+    </div>
+
+    <script src="js/fun.js"></script>
+    <script src="js/rep.js"></script>
+    <script src="js/actions.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

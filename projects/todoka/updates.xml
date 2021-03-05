@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gupdate xmlns='https://www.google.com/update2/response' protocol='2.0'>
+  <app appid='0932485601943857023946'>
+    <updatecheck codebase='https://todoka.tk/img/todoka.crx' version='1.0' />
+  </app>
+</gupdate>

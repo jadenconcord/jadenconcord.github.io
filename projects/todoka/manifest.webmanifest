@@ -1,0 +1,20 @@
+{
+  "name": "Todoka - Task Manager",
+  "short_name": "Todoka",
+  "theme_color": "#5b48e9",
+  "background_color": "#343c57",
+  "display": "minimal-ui",
+  "dir": "ltr",
+  "lang": "en",
+  "scope": "/",
+  "start_url": "https://todoka.tk/",
+  "theme_color": "transparent",
+  "description": "",
+  "orientation": "any",
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "icons": [],
+  "url": "https://todoka.tk",
+  "screenshots": [],
+  "update_url": "https://todoka.tk/updates.xml"
+}

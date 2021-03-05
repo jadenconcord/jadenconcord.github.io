@@ -1,0 +1,41 @@
+<h1>My Day Rutine</h1>
+<br><h2>Initalization Requirements</h2>
+<ul>
+  <li>Make Bed</li>
+  <li>El bib</li>
+  <li>Food</li>
+  <li>Tea</li>
+  <li>Scedule</li>
+</ul>
+<br><h2>Work Method</h2>
+<p>52 (or 25) minutes of deep work</p>
+<p>17 (or 5) minutes of refresh break</p>
+<br><h2>Break Options</h2>
+<ul>
+  <li>Beathing</li>
+  <li>Walk</li>
+  <li>Light Workout</li>
+  <li>Tea / Water / Snack</li>
+  <li>Make Bed</li>
+  <li>Clean Room</li>
+</ul>
+<br><h2>Skedule blocks</h2>
+<ol>
+  <li>-[10:00] Day Initalization</li>
+  <li>[10:00-10:50] Work Block 1</li>
+  <li>[10:50-11:10] Break 1</li>
+  <li>[11:10-12:00] Work Block 2</li>
+  <li>[12:00-12:10] Short break</li>
+  <li>[12:10-12:30] Short work Block (finish up)</li>
+  <li>[12:30-1:00] Lunch Break (walk?)</li>
+  <li>[1:00-1:50] Work Block 3</li>
+  <li>[1:50-2:10] Break 2</li>
+  <li>[2:10-3:00] Work Block 4</li>
+  <li>[3:00-3:20] Break 3</li>
+  <li>[3:20-4:00] Work Block 4</li>
+  <li>[4:00-5:00] Long refresh Break</li>
+  <li>[5:00-5:20] Short Work Block (transition)</li>
+  <li>[5:20-5:30] Short Break</li>
+  <li>[5:30-6:20] Work Block 5</li>
+  <li>[6:20-7:00] Dinner Break</li>
+</ol>

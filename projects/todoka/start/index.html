@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Todoka - Task manager</title>
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../img/favicon.png"  type="image/png">
+    <link rel="manifest" href="../manifest.webmanifest">
+  </head>
+  <body>
+    <header>
+      <div class="center">
+        <div class="left">
+          <img alt="Todoka Logo" src="../img/favicon.png">
+          <span>TodoKa</span>
+        </div>
+        <div class="right">
+          <nav>
+            <a target="_blank" href="https://github.com/jadenjoner/todoka"><svg height="20" style="position:relative;top:3px;" class="octicon octicon-mark-github text-white" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path style="fill:#d2d5de;" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>Github</a>
+            <a target="_blank" href="https://github.com/jadenjoner/todoka/issues">Report Bug</a>
+            <a onclick="start()">Start Using TodoKa</a>
+          </nav>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </header>
+    <main>
+      <div class="center">
+        <h1>TodoKa</h1>
+        <h2 class="quote">The free app that keeps track of your tasks</h2>
+        <br><br>
+        <video controls width="100%" poster="img/video_frame.svg">
+          <source src="img/video.mp4" type="video/mp4">
+          Your browser does not support videos
+        </video>
+        <div class="middle">
+          <button onclick="start()">Start using TodoKa</button>
+        </div>
+
+        <svg class="down-arrow" viewBox="0 0 70 40" onclick="window.scrollTo(0, 1000)">
+          <path fill="" d="M61.46 1.46a5 5 0 1 1 7.08 7.08l-6.92 6.9L50 12.95 61.46 1.46z"></path>
+          <path fill="" d="M64.21 12.86L38.54 38.54a5 5 0 0 1-7.08 0l-30-30a5 5 0 0 1 7.08-7.08L35 27.93 54.54 8.39l9.67 4.47z"></path>
+          <path fill="" d="M58.68 18.4L38.54 38.53a5 5 0 0 1-7.08 0l-30-30a5 5 0 0 1 7.08-7.08L35 27.93 38.93 24l19.75-5.6z"></path>
+          <path fill="" d="M26.78 33.85L7.57 14.64l11.34-2.8 7.08 7.08z"></path>
+          <path fill="" d="M10.4 17.47L1.46 8.54a5 5 0 0 1 7.08-7.08l13.64 13.65-11.78 2.36z"></path>
+        </svg>
+
+        <div class="gap"></div>
+
+        <section>
+          <div class="left text">
+            <h2>Only focus on what you will get done that day</h2>
+            <p>It's easy to get overwelmed with tasks or to forget them. Thats why Todoka was created so you only have to worry about what you have to do today.</p>
+          </div>
+          <div class="right image">
+            <img src="img/today-preview.gif">
+          </div>
+          <div class="clear"></div>
+        </section>
+
+        <div class="gap"></div>
+
+        <section>
+          <div class="left image">
+            <img src="img/tasks-preview.gif" alt="">
+          </div>
+          <div class="right text">
+            <h2>Todoka is free and open source</h2>
+            <p>Todoka is a free app. With the source code on
+              <a href="https://github.com/jadenjoner/todoka" target="_blank">Github</a>,
+              Todoka is an open source application. Todoka can be modefied and sold according to the
+              <a href="https://www.gnu.org/licenses/gpl-3.0-standalone.html" target="_blank">GPL 3.0</a> licence</p>
+          </div>
+          <div class="clear"></div>
+        </section>
+
+        <br><br>
+
+        <div class="middle">
+          <button onclick="start()">Start using TodoKa</button>
+        </div>
+
+        <div class="gap"></div>
+      </div>
+    </main>
+  </body>
+  <footer>
+    <div class="center">
+      <div class="left">
+        <img alt="Todoka Logo" src="../img/favicon.png">
+      </div>
+      <nav class="right">
+        <a target="_blank" href="https://github.com/jadenjoner/todoka"><svg height="20" style="position:relative;top:3px;" class="octicon octicon-mark-github text-white" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path style="fill:#d2d5de;" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>Github</a>
+        <a target="_blank" href="https://www.gnu.org/licenses/gpl-3.0-standalone.html">Licence</a>
+        <a target="_blank" href="https://github.com/jadenjoner/todoka/issues">Report Bug</a>
+        <a onclick="start()">Start Using TodoKa</a>
+      </nav>
+      <div class="clear"></div>
+    </div>
+  </footer>
+
+  <script>
+
+  function start(){
+    localStorage.setItem('todoka', true)
+    window.location = '../'
+  }
+
+  </script>
+</html>

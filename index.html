@@ -6,6 +6,7 @@
   <title>Jaden Concord</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/76759653?s=460&u=d5e9c6481b3f31bdad3afe4c775de560d6eff9f0&v=4">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
@@ -28,6 +29,17 @@
           <a href="{repo.url}" target="_black" title="{repo.name}"><section>
             <h3>{repo.name}</h3>
             <p>{repo.description}</p>
+          </section></a>
+          {/each}
+        </div>
+        <h2>Public Projects</h2>
+        <div class="projects">
+          {each projects project}
+          <a href="projects/{project.dir}" target="_black" title="{project.name}"><section>
+            <div class="title" style="background: linear-gradient(to right, {project.grad + ''})">
+              <span class="material-icons"><img src="{project.fav || 'projects/'+project.dir+'/favicon.png'}" alt="{project.icon || ''}" onerror="this.src='projects/{project.dir}/img/favicon.png';this.onerror=null"></span>
+            </div>
+            <h3>{project.name}</h3>
           </section></a>
           {/each}
         </div>

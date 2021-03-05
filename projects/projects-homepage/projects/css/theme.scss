@@ -1,0 +1,243 @@
+// My Theme //
+
+// Options
+$theme-name: 'My Theme';
+$theme-type: 1;
+$theme: #465bb0;
+$theme2: #40A16F;
+$black1: #1D1D2A;
+$black4: #2E2E43;
+$white1: #e7e5da;
+$white4: #ccccc1;
+$border-width: 2px;
+$radius1: 4px;
+$radius2: 8px;
+$transition-time: 0.2s;
+$font: Ubuntu, Roboto, Oxygen, -apple-system, BlinkMacSystemFont, Segoe UI, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+$shadow-x: 0px;
+$shadow-y: 2px;
+$shadow-blur: 5px;
+$shadow-spread: 1px;
+$shadow-opacity: 0.4;
+
+
+// Calculations
+$theme-dark: saturate(darken($theme, 5%), 5%);
+$theme-light: desaturate(lighten($theme, 5%), 5%);
+
+$theme2-dark: saturate(darken($theme2, 5%), 5%);
+$theme2-light: desaturate(lighten($theme2, 5%), 5%);
+
+$theme-red: adjust-hue($theme, - hue($theme) );
+$theme-yellow: adjust-hue($theme, - hue($theme) + 60deg);
+$theme-green: adjust-hue($theme, - hue($theme) + 120deg);
+$theme-blue: adjust-hue($theme, - hue($theme) + 240deg);
+
+$black2: mix($black1, $black4, 75%);
+$black3: mix($black1, $black4, 25%);
+$black0: saturate(darken($black1, 5%), 5%);
+$black5: mix($black4, $white1, 90%);
+
+$white2: mix($white1, $white4, 75%);
+$white3: mix($white1, $white4, 25%);
+$white0: desaturate(lighten($white1, 5%), 5%);
+$white5: mix($black0, $white4, 10%);
+
+$radius0: $radius1 / 2;
+$radius3: $radius2 * 2;
+
+$shadow-color-black: rgba($black1, $shadow-opacity);
+$shadow-color-white: rgba($white1, $shadow-opacity/1.5);
+
+$bg0: var(--bg0);
+$bg1: var(--bg1);
+$bg2: var(--bg2);
+$bg3: var(--bg3);
+$bg4: var(--bg4);
+$bg5: var(--bg5);
+
+$fg0: var(--fg0);
+$fg1: var(--fg1);
+$fg2: var(--fg2);
+$fg3: var(--fg3);
+$fg4: var(--fg4);
+$fg5: var(--fg5);
+
+@mixin navigator{
+@if ($theme-type == 1 or $theme-type == 3 or $theme-type == 4){
+  --bg0: #{$black0};
+  --bg1: #{$black1};
+  --bg2: #{$black2};
+  --bg3: #{$black3};
+  --bg4: #{$black4};
+  --bg5: #{$black5};
+
+  --fg0: #{$white0};
+  --fg1: #{$white1};
+  --fg2: #{$white2};
+  --fg3: #{$white3};
+  --fg4: #{$white4};
+  --fg5: #{$white5};
+}
+@else {
+  --bg0: #{$white0};
+  --bg1: #{$white1};
+  --bg2: #{$white2};
+  --bg3: #{$white3};
+  --bg4: #{$white4};
+  --bg5: #{$white5};
+
+  --fg0: #{$black0};
+  --fg1: #{$black1};
+  --fg2: #{$black2};
+  --fg3: #{$black3};
+  --fg4: #{$black4};
+  --fg5: #{$black5};
+}
+color: $fg2;
+}
+
+@mixin content{
+@if ($theme-type == 1){
+  --bg0: #{$black0};
+  --bg1: #{$black1};
+  --bg2: #{$black2};
+  --bg3: #{$black3};
+  --bg4: #{$black4};
+  --bg5: #{$black5};
+
+  --fg0: #{$white0};
+  --fg1: #{$white1};
+  --fg2: #{$white2};
+  --fg3: #{$white3};
+  --fg4: #{$white4};
+  --fg5: #{$white5};
+}
+@else {
+  --bg0: #{$white0};
+  --bg1: #{$white1};
+  --bg2: #{$white2};
+  --bg3: #{$white3};
+  --bg4: #{$white4};
+  --bg5: #{$white5};
+
+  --fg0: #{$black0};
+  --fg1: #{$black1};
+  --fg2: #{$black2};
+  --fg3: #{$black3};
+  --fg4: #{$black4};
+  --fg5: #{$black5};
+}
+color: $fg2;
+}
+
+@mixin section{
+@if ($theme-type == 1 or $theme-type == 4){
+  --bg0: #{$black0};
+  --bg1: #{$black1};
+  --bg2: #{$black2};
+  --bg3: #{$black3};
+  --bg4: #{$black4};
+  --bg5: #{$black5};
+
+  --fg0: #{$white0};
+  --fg1: #{$white1};
+  --fg2: #{$white2};
+  --fg3: #{$white3};
+  --fg4: #{$white4};
+  --fg5: #{$white5};
+}
+@else {
+  --bg0: #{$white0};
+  --bg1: #{$white1};
+  --bg2: #{$white2};
+  --bg3: #{$white3};
+  --bg4: #{$white4};
+  --bg5: #{$white5};
+
+  --fg0: #{$black0};
+  --fg1: #{$black1};
+  --fg2: #{$black2};
+  --fg3: #{$black3};
+  --fg4: #{$black4};
+  --fg5: #{$black5};
+}
+color: $fg2;
+}
+
+@mixin sidebar{
+@if ($theme-type == 1 or $theme-type == 3 or $theme-type == 4 or $theme-type == 5){
+  --bg0: $black0;
+  --bg1: $black1;
+  --bg2: $black2;
+  --bg3: $black3;
+  --bg4: $black4;
+  --bg5: $black5;
+
+  --fg0: $white0;
+  --fg1: $white1;
+  --fg2: $white2;
+  --fg3: $white3;
+  --fg4: $white4;
+  --fg5: $white5;
+}
+@else {
+  --bg0: $white0;
+  --bg1: $white1;
+  --bg2: $white2;
+  --bg3: $white3;
+  --bg4: $white4;
+  --bg5: $white5;
+
+  --fg0: $black0;
+  --fg1: $black1;
+  --fg2: $black2;
+  --fg3: $black3;
+  --fg4: $black4;
+  --fg5: $black5;
+}
+color: $fg2;
+}
+
+@mixin input{
+// @include section;
+}
+
+@mixin clickable{
+@include section;
+}
+
+body{
+@if ($theme-type == 1 or $theme-type == 3){
+  --bg0: #{$black0};
+  --bg1: #{$black1};
+  --bg2: #{$black2};
+  --bg3: #{$black3};
+  --bg4: #{$black4};
+  --bg5: #{$black5};
+
+  --fg0: #{$white0};
+  --fg1: #{$white1};
+  --fg2: #{$white2};
+  --fg3: #{$white3};
+  --fg4: #{$white4};
+  --fg5: #{$white5};
+}
+@else {
+  --bg0: #{$white0};
+  --bg1: #{$white1};
+  --bg2: #{$white2};
+  --bg3: #{$white3};
+  --bg4: #{$white4};
+  --bg5: #{$white5};
+
+  --fg0: #{$black0};
+  --fg1: #{$black1};
+  --fg2: #{$black2};
+  --fg3: #{$black3};
+  --fg4: #{$black4};
+  --fg5: #{$black5};
+}
+color: $fg2;
+background: $bg1;
+}

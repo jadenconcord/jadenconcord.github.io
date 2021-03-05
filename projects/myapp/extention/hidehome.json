@@ -1,0 +1,5 @@
+{
+  "onInstall": "closeItem('page/home.xml')",
+  "onRemove": "page('page/home.xml')",
+  "onStart": "closeItem('page/home.xml')"
+}

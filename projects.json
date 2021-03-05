@@ -1,0 +1,100 @@
+{
+  "projects": [
+    {
+      "name": "Sunspot Digital",
+      "dir": "sunspot",
+      "type": "web",
+      "grad": [
+        "#FFE46C",
+        "#FFE46C"
+      ],
+      "private": false,
+      "star": false
+    },
+    {
+      "name": "Todoka",
+      "dir": "todoka",
+      "type": "web",
+      "grad": [
+        "#844dde",
+        "#604dde"
+      ],
+      "private": false,
+      "star": false,
+      "icon": "task_alt",
+      "url": "https://todoka.tk"
+    },
+    {
+      "name": "MyApp 1.0",
+      "dir": "myapp",
+      "type": "web",
+      "grad": [
+        "#d95448",
+        "#d96a48"
+      ],
+      "private": false,
+      "star": false,
+      "icon": "home"
+    },
+    {
+      "name": "Vanilla JS",
+      "dir": "vanillajs",
+      "type": "web",
+      "grad": [
+        "#f1efbf",
+        "#d0cd77"
+      ],
+      "private": false,
+      "star": false,
+      "icon": "trip_origin"
+    },
+    {
+      "name": "Theme Generator",
+      "dir": "themegen2",
+      "type": "web",
+      "grad": [
+        "#48d9d5",
+        "#48d9d5"
+      ],
+      "private": false,
+      "star": true,
+      "icon": "brush"
+    },
+    {
+      "name": "ICE (V2)",
+      "dir": "ice",
+      "type": "web",
+      "grad": [
+        "#48b7d9",
+        "#4873d9"
+      ],
+      "private": false,
+      "star": true,
+      "icon": "ac_unit"
+    },
+    {
+      "name": "Projects Homepage",
+      "dir": "projects-homepage",
+      "type": "web",
+      "grad": [
+        "#5563d2",
+        "#70bea3"
+      ],
+      "private": false,
+      "star": true,
+      "icon": "dashboard"
+    },
+    {
+      "name": "Sunspot Alternate CTEC Final",
+      "dir": "ctec-final",
+      "type": "web",
+      "private": false,
+      "icon": "school",
+      "grad": [
+        "#d1ba63",
+        "#c99c81"
+      ],
+      "star": false
+    }
+  ]
+}

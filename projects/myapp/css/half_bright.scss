@@ -1,0 +1,206 @@
+
+//
+//
+// $white-lighter: desaturate(#e5d9c5, 10%);
+// $white-darker: desaturate(#b1aca0, 10%);
+// $white1: $white-lighter;
+// $white4: $white-darker;
+// $white2: mix($white1, $white4, 75%);
+// $white3: mix($white1, $white4, 25%);
+// $white0: desaturate(lighten($white1, 5%), 5%);
+
+
+
+body{
+  background: $white1;
+  color: $black3;
+
+  h1, h2, h3, h4, h5{
+    color: $black1;
+  }
+}
+
+
+
+main{
+  #content{
+    .box1-outer{
+      section{
+        border-color: $white3;
+        background: $white2;
+        p{
+          color: mix($black1, $white2, 80%);
+        }
+      }
+    }
+  }
+}
+
+
+
+
+.textedit{
+  .toolbar{
+    border: 2px solid $black0;
+    background: $black2;
+    color: $white2;
+
+    i:hover{
+      color: $white0;
+      background: #fff1;
+    }
+    i:active{
+      background: $theme;
+    }
+  }
+
+  .textinput{
+    background: $white3;
+    border-color: $white4;
+
+    iframe{
+      border: 2px solid $black2;
+    }
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+input[type="button"].b2,
+input[type="submit"].b2,
+button.b2,
+input[type="reset"].b2,
+label.b2 {
+  user-select: none;
+  font-family: inherit;
+  outline: none !important;
+  background: $theme2;
+  border: $border-width*1.5 solid mix($theme2, $white4, 10%);
+  padding: 10px 20px;
+  border-radius: $border-radius2;
+  color: $black0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: inherit;
+  margin: auto 0;
+  transition: $transition-time;
+
+  &:hover {
+    background: $theme2-bright;
+    border-color: mix($theme2-bright, $white4, 10%);
+    cursor: pointer;
+  }
+
+  &:active {
+    transition: 0s;
+    background: $theme2-dark;
+    border-color: mix($theme2, $white4, 20%);
+  }
+}
+
+input[type="button"].b1,
+input[type="submit"].b1,
+button.b1,
+input[type="reset"].b1,
+label.b1 {
+  user-select: none;
+  font-family: inherit;
+  outline: none !important;
+  background: $white1;
+  border: $border-width solid $white0;
+  padding: 8px 16px;
+  border-radius: $border-radius1;
+  color: mix($black4, $black1, 90%);
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: inherit;
+  margin: auto 0;
+  transition: $transition-time;
+
+  &.red{
+    background: $theme-red;
+    color: $black0;
+    border-color: mix($theme-red, $white0, 80%);
+  }
+  &.yellow{
+    background: $theme-yellow;
+    color: $black0;
+    border-color: mix($theme-yellow, $white0, 80%);
+  }
+  &.green{
+    background: $theme-green;
+    color: $black0;
+    border-color: mix($theme-green, $white0, 80%);
+  }
+  &.blue{
+    background: $theme-blue;
+    color: $black0;
+    border-color: mix($theme-blue, $white0, 80%);
+  }
+
+  &:hover {
+    color: $black4;
+    background: $white2;
+    border-color: $theme2;
+    cursor: pointer;
+  }
+
+  &:active {
+    transition: 0s;
+    border-color: $theme2;
+    background: $theme2;
+    color: $black0;
+  }
+
+  &:focus {
+    border-color: $theme2;
+  }
+}
+
+
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+input[type="number"], input[type=time],
+.color-wrap,
+select {
+  transition: border-color $transition-time/2;
+  appearance: none;
+  font-size: inherit;
+  font-family: inherit;
+  outline: none !important;
+  background: $white2;
+  border: $border-width solid $white1;
+  padding: 8px 16px;
+  color: $black3;
+  border-radius: $border-radius1;
+
+  &:focus {
+    border-color: $theme2;
+    background: $white1;
+    color: $black2;
+  }
+}
